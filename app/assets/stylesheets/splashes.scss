@@ -1,0 +1,85 @@
+// Place all the styles related to the Splashes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: #606060;
+}
+
+div {
+  display: block;
+  position: absolute;
+  font-family: serif;
+  text-align: center;
+}
+
+div.splash-main {
+  top: 200px;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  height: 600px;
+}
+
+div.content-line {
+  display: block;
+  position: relative;
+  margin: auto;
+}
+
+span {
+  position: relative;
+  display: inline;
+}
+
+span.splash-name{
+  font-family: Century;
+  font-size: 65px;
+  color: #262626;
+
+  vertical-align: baseline;
+}
+
+span.splash-italic {
+  font-style: italic;
+  font-size: 35px;
+  color: #444;
+
+  vertical-align: top;
+}
+
+span.splash-job {
+  font-family: Century;
+  font-size: 50px;
+  color: #2f2f2f;
+
+  padding-left: 5px;
+  vertical-align: baseline;
+}
+
+a {
+  color: #2f2f2f;
+  text-decoration: none;
+}
+
+#splash-first {
+  margin-left: -250px;
+}
+
+#splash-second {
+  margin-top: -13px;
+  margin-left: 90px;
+}
+
+#splash-third{
+  margin-top: -18px;
+  margin-left: -75px;
+}
+
+#splash-fourth {
+  margin-top: -7px;
+  margin-left: 250px;
+}
+

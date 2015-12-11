@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  root 'pages#home'
-  get 'pages/webdev'
-  get 'pages/photographer'
-  get 'pages/philosopher'
+  root                   'splashes#home'
+  get 'webdev'        => 'pages#webdev'
+  get 'photographer'  => 'pages#photographer'
+  get 'philosopher'   => 'pages#philosopher'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
