@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
   get 'pages/home'
-
   get 'pages/web-developer'
-
   get 'pages/photographer'
-
   get 'pages/philosopher'
 
   # The priority is based upon order of creation: first created -> highest priority.
