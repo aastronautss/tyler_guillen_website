@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'pages#home'
-  get 'pages/web-developer'
+  get 'pages/webdev'
   get 'pages/photographer'
   get 'pages/philosopher'
 

@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def home
   end
 
-  def web-developer
+  def webdev
   end
 
   def photographer
