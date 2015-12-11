@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'pages/home'
+  root 'pages#home'
   get 'pages/web-developer'
   get 'pages/photographer'
   get 'pages/philosopher'
