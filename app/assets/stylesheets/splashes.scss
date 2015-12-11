@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@font-face {
+  font-family: century;
+  src: url("/assets/CENSCBK.TTF");
+}
+
 body {
   background-color: #606060;
 }
@@ -35,7 +40,7 @@ span {
 }
 
 span.splash-name{
-  font-family: Century;
+  font-family: century;
   font-size: 65px;
   color: #262626;
 
@@ -51,7 +56,7 @@ span.splash-italic {
 }
 
 span.splash-job {
-  font-family: Century;
+  font-family: century;
   font-size: 50px;
   color: #2f2f2f;
 
