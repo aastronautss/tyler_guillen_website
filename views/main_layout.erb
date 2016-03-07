@@ -3,8 +3,9 @@
   <head>
     <title>Tyler Guillen is a <%= JOBS[@role] %>.</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="reset.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="/reset.css">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <%= yield_content :custom_styles %>
   </head>
   <body>
     <div id="wrap" class="clearfix">
@@ -14,7 +15,15 @@
           <span class="italic">is a</span>
           <span class="job"><%= JOBS[@role] %>.</span>
         </h1>
-        <%= yield_content :header_links %>
+        <nav>
+          <ul>
+            <% self.send("#{@role}_links").each do |path, text| %>
+              <li>
+                <a href="<%= path %>"><%= text %></a>
+              </li>
+            <% end %>
+          </ul>
+        </nav>
       </header>
       <main class="clearfix">
         <%= yield %>

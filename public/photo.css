@@ -1,0 +1,41 @@
+#photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#photo img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* main {
+  background: url(images/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+/* #photo {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+
+#photo img {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+} */

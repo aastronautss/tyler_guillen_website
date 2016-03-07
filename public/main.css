@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lora:400,400italic);
 
+/* Body & General */
+
 html, body {
   height: 100%;
 }
@@ -19,6 +21,8 @@ body {
   height: 0;
   clear: both;
 }
+
+/* Headers & Navbar */
 
 header {
   position: relative;
@@ -60,10 +64,21 @@ header li:last-child {
   margin-right: 0;
 }
 
+/* Body */
+
 main {
+  box-sizing: border-box;
   overflow: auto;
   padding: 0 0 65px 0;
+  text-align: center;
 }
+
+.not-found {
+  margin-top: 150px;
+  text-align: center;
+}
+
+/* Footer */
 
 footer {
   position: relative;
