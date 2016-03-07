@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic);
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: normal 16px/1.5em 'Lora', serif;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+main {
+  overflow: auto;
+  padding: 0 0 85px 0;
+}
+
+footer {
+  position: relative;
+  margin: -85px 0 0 0;
+  height: 85px;
+  clear: both;
+}
+
+/* Opera fix for footer */
+
+body:before {
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+}
+
+footer nav {
+  text-align: center;
+  padding: 10px 0 50px 0;
+}
+
+footer li {
+  display: inline-block;
+}
+
+footer li:first-child {
+  margin-right: 40px;
+}
+
+footer li:last-child {
+  margin-left: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+  -webkit-transition: color .45s;
+  -moz-transition: color .45s;
+  transition: color .45s;
+}
+
+a:hover {
+  color: #9a9a9a;
+}
