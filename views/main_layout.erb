@@ -7,11 +7,16 @@
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body>
-    <div id="wrap">
-      <header>
-
+    <div id="wrap" class="clearfix">
+      <header class="clearfix">
+        <h1>
+          <span class="name">Tyler Guillen</span>
+          <span class="italic">is a</span>
+          <span class="job"><%= JOBS[@role] %>.</span>
+        </h1>
+        <%= yield_content :header_links %>
       </header>
-      <main>
+      <main class="clearfix">
         <%= yield %>
       </main>
     </div>

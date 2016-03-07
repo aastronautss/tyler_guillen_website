@@ -7,6 +7,10 @@ JOBS = { webdev: "Web Developer",
          photo: "Photographer",
          phil: "Philosopher" }.freeze
 
+not_found do
+  redirect '/'
+end
+
 get '/' do
   erb :splash, layout: :splash_layout
 end

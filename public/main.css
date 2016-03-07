@@ -12,15 +12,63 @@ body {
   min-height: 100%;
 }
 
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+header {
+  position: relative;
+  max-width: 800px;
+  top: 5px;
+  margin: 0 auto 15px auto;
+}
+
+h1 {
+  display: inline-block;
+  float: left;
+  font-size: 28px;
+}
+
+h1 .name {
+  color: #4a4a4a;
+}
+
+h1 .italic {
+  color: #999;
+  font-style: italic;
+}
+
+h1 .job {
+  color: #666;
+}
+
+header nav {
+  display: inline-block;
+  float: right;
+}
+
+header li {
+  display: inline-block;
+  margin: 0 5px 0 5px;
+}
+
+header li:last-child {
+  margin-right: 0;
+}
+
 main {
   overflow: auto;
-  padding: 0 0 85px 0;
+  padding: 0 0 65px 0;
 }
 
 footer {
   position: relative;
-  margin: -85px 0 0 0;
-  height: 85px;
+  margin: -65px 0 0 0;
+  height: 65px;
   clear: both;
 }
 
@@ -36,7 +84,7 @@ body:before {
 
 footer nav {
   text-align: center;
-  padding: 10px 0 50px 0;
+  padding: 10px 0 0 0;
 }
 
 footer li {
