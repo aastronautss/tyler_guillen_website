@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic);
+
+body {
+  font: normal 52px/.95em 'Lora', serif;
+  color: #2f2f2f;
+}
+
+main {
+  position: relative;
+  top: 210px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+div {
+  position: relative;
+}
+
+.webdev {
+  left: 165px;
+}
+
+.photo {
+  left: 100px;
+}
+
+.phil {
+  top: 9px;
+  left: 270px;
+}
+
+span {
+  display: inline-block;
+}
+
+.name {
+  font-size: 62px;
+  color: #4a4a4a;
+}
+
+.italic {
+  position: relative;
+  top: -12px;
+  left: 7px;
+  font-style: italic;
+  font-size: 32px;
+  vertical-align: top;
+  color: #7d7d7d;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+  -webkit-transition: color .45s;
+  transition: color .45s;
+}
+
+a:hover {
+  color: #9a9a9a;
+}
