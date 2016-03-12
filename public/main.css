@@ -1,13 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic);
-
-/* Body & General */
-
-html, body {
-  height: 100%;
-}
-
 body {
-  font: normal 16px/1.5em 'Lora', serif;
+  font: 400 16px/1.5em Lora, serif;
+  color: #444;
+  -webkit-font-feature-settings: "kern", "liga";
+  -moz-font-feature-settings: "kern", "liga";
+  font-feature-settings: "kern", "liga";
+  text-rendering: optimizeLegibility;
 }
 
 #wrap {
@@ -22,13 +19,21 @@ body {
   clear: both;
 }
 
-/* Headers & Navbar */
+a {
+  text-decoration: none;
+  color: #555;
+  -webkit-transition: color .45s;
+  -moz-transition: color .45s;
+  transition: color .45s;
+}
+
+a:hover {
+  color: #9a9a9a;
+}
 
 header {
-  position: relative;
   max-width: 800px;
-  top: 5px;
-  margin: 0 auto 15px auto;
+  margin: 5px auto 15px auto;
 }
 
 h1 {
@@ -50,6 +55,13 @@ h1 .job {
   color: #666;
 }
 
+h2 {
+  text-align: center;
+  letter-spacing: .1em;
+  font-size: 1.3em;
+  font-variant: small-caps;
+}
+
 header nav {
   display: inline-block;
   float: right;
@@ -64,37 +76,32 @@ header li:last-child {
   margin-right: 0;
 }
 
-/* Body */
-
 main {
-  box-sizing: border-box;
-  overflow: auto;
-  padding: 0 0 65px 0;
+  max-width: 950px;
+  padding: 25px 0 0 0;
+  margin: 0 auto;
+}
+
+.light {
+  color: #adadad;
+}
+
+.contact-info {
+  color: #6a6a6a;
   text-align: center;
+  margin: 35px 0 0 0;
+  line-height: 1em;
 }
 
-.not-found {
-  margin-top: 150px;
-  text-align: center;
+.contact-info dt {
+  margin: 0 0 5px 0;
+  color: #999;
+  font-variant: small-caps;
+  letter-spacing: .1em;
 }
 
-/* Footer */
-
-footer {
-  position: relative;
-  margin: -65px 0 0 0;
-  height: 65px;
-  clear: both;
-}
-
-/* Opera fix for footer */
-
-body:before {
-  content: "";
-  height: 100%;
-  float: left;
-  width: 0;
-  margin-top: -32767px;
+.contact-info dd + dt {
+  margin: 25px 0 5px 0;
 }
 
 footer nav {
@@ -114,14 +121,10 @@ footer li:last-child {
   margin-left: 40px;
 }
 
-a {
-  text-decoration: none;
-  color: #555;
-  -webkit-transition: color .45s;
-  -moz-transition: color .45s;
-  transition: color .45s;
-}
-
-a:hover {
-  color: #9a9a9a;
+footer {
+  position: absolute;
+  left: 50%;
+  bottom: 7px;
+  width: 800px;
+  transform: translateX(-50%);
 }

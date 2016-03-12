@@ -1,41 +1,77 @@
-#photo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+#wrap {
   height: 100%;
+}
+
+main {
   overflow: hidden;
 }
 
-#photo img {
-  flex-shrink: 0;
-  min-width: 100%;
-  min-height: 100%;
+.grid {
+  height: 100%;
 }
+
+.box {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 50%;
+  height: 50%;
+  background: #aaa;
+}
+
 
 /* main {
-  background: url(images/bg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-image: url(https://c2.staticflickr.com/6/5590/14704476330_00bcd4fd1f_o.jpg);
   background-size: cover;
+  height: calc(100% - 80px);
 } */
 
-/* #photo {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
+/* .content {
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
 }
 
-#photo img {
-  position: absolute;
-  top: 44px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  min-width: 50%;
-  min-height: 50%;
+.grid-line {
+  display: block;
+}
+
+.box {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 300px;
+  width: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+  /* margin: 5px 10px; */
+/*  transition: .40s;
+  -webkit-transition: .40s;
+}
+
+.box:hover {
+  background-size: 103%;
+}
+
+.one {
+  background-image: url(https://c2.staticflickr.com/6/5306/5900499948_eb9285fc95_o.jpg);
+  background-size: 104% auto;
+  background-position: 50% 25%;
+}
+
+.one:hover {
+  background-size: 106%
+}
+
+.two {
+  background-image: url(https://c2.staticflickr.com/8/7323/9603473861_ee8dbd7517_o.jpg);
+}
+
+.three {
+  background-image: url(https://c2.staticflickr.com/6/5071/7059768969_08bb6ffb97_c.jpg  );
+}
+
+.four {
+  background-image: url(https://c1.staticflickr.com/5/4149/4987647584_4e55258e18_o.jpg);
 } */
