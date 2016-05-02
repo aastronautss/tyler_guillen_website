@@ -1,6 +1,7 @@
 ---
 webdev:
   name: Web Developer
+  description: Projects by DC-based web developer Tyler Guillen.
   pages:
     - name: About
       path: about
@@ -8,6 +9,7 @@ webdev:
       path: contact
 photo:
   name: Photographer
+  description: Photographs by DC-based web developer Tyler Guillen.
   pages:
     - name: Projects
       path: projects
@@ -26,6 +28,7 @@ photo:
       path: contact
 phil:
   name: Philosopher
+  description: Philosophical work by DC-based web developer Tyler Guillen.
   pages:
     - name: About
       path: about

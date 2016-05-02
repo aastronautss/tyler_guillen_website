@@ -1,8 +1,15 @@
 <!doctype html>
 <html lang="en-US">
   <head>
-    <title>Tyler Guillen is a <%= SITEMAP[@role]["name"] %>.</title>
+    <title>
+      <% if @page %>
+        <%= @page.capitalize %> |
+      <% end %>
+      Tyler Guillen is a <%= SITEMAP[@role]["name"] %>
+    </title>
+    <meta name="description" content="<%= SITEMAP[@role]["description"] %>">
     <meta charset="UTF-8" />
+
     <link rel="stylesheet" type="text/css" href="/reset.css">
     <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Lora:400,400i/EB+Garamond:400,400i:f">
     <link rel="stylesheet" type="text/css" href="/main.css">

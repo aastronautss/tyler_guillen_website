@@ -2,8 +2,8 @@ body {
   font: 400 16px/1.5em Lora, serif;
   color: #444;
   -webkit-font-feature-settings: "kern", "liga";
-  -moz-font-feature-settings: "kern", "liga";
-  font-feature-settings: "kern", "liga";
+     -moz-font-feature-settings: "kern", "liga";
+          font-feature-settings: "kern", "liga";
   text-rendering: optimizeLegibility;
 }
 
