@@ -28,7 +28,7 @@ phil:
   name: Philosopher
   pages:
     - name: About
-      path: contact
+      path: about
     - name: Contact
       path: contact
 ...

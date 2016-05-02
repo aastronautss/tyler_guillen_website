@@ -15,15 +15,17 @@
     <div id="wrap" class="clearfix">
       <header class="clearfix">
         <h1>
-          <span class="name">Tyler Guillen</span>
-          <span class="italic">is a</span>
-          <span class="job"><%= SITEMAP[@role]["name"] %>.</span>
+          <a href="<%= "/#{@role}" %>">
+            <span class="name">Tyler Guillen</span>
+            <span class="italic">is a</span>
+            <span class="job"><%= SITEMAP[@role]["name"] %>.</span>
+          </a>
         </h1>
         <nav>
           <ul>
-            <% send("#{@role}_links").each do |path, text| %>
+            <% SITEMAP[@role]["pages"].each do |page_hash| %>
               <li>
-                <a href="<%= path %>"><%= text %></a>
+                <a href="<%= page_path page_hash %>"><%= page_hash['name'] %></a>
               </li>
             <% end %>
           </ul>

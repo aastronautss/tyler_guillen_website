@@ -17,7 +17,9 @@ def nonexistent_role?
 end
 
 def nonexistent_subpage?
-  !File.exist? "views/#{@subpage}.erb"
+  pages = SITEMAP[@role]['pages']
+  paths = pages.map { |page| page['path'] }
+  !paths.include? @page
 end
 
 def render_role_subpage
@@ -26,7 +28,7 @@ def render_role_subpage
   elsif nonexistent_subpage?
     status 404
   else
-    erb @subpage, layout: :main_layout
+    erb "#{@role}_#{@page}".to_sym, layout: :main_layout
   end
 end
 
@@ -35,20 +37,8 @@ end
 # ====------------------====
 
 helpers do
-  def webdev_links
-    { "/webdev/about" => "About",
-      "/webdev/contact" => "Contact" }
-  end
-
-  def photo_links
-    { "/photo/portfolio" => "Portfolio",
-      "/photo/about" => "About",
-      "/photo/contact" => "Contact" }
-  end
-
-  def phil_links
-    { "/phil/about" => "About",
-      "/phil/contact" => "Contact" }
+  def page_path(page_hash)
+    "/#{@role}/#{page_hash['path']}"
   end
 end
 
@@ -76,7 +66,7 @@ end
 
 get '/:role/:page' do
   @role = params[:role]
-  @subpage = (params[:role] + "_" + params[:page]).to_sym
+  @page = params[:page]
 
   render_role_subpage
 end
