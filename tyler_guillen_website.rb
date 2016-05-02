@@ -20,23 +20,41 @@ def render_markdown(text)
   markdown.render text
 end
 
+# TODO: DRY up the 'not found' logic.
+
 def nonexistent_role?
   !SITEMAP.keys.include? @role
 end
 
-def nonexistent_subpage?
+def nonexistent_page?
   pages = SITEMAP[@role]['pages']
   paths = pages.map { |page| page['path'] }
   !paths.include? @page
 end
 
-def render_role_subpage
+def nonexistent_subpage?
+  pages = SITEMAP[@role][@page]['pages']
+  paths = pages.map { |page| page['path'] }
+  !paths.include? @page
+end
+
+def render_role_page
   if nonexistent_role?
     redirect '/'
-  elsif nonexistent_subpage?
+  elsif nonexistent_page?
     status 404
   else
     erb "#{@role}_#{@page}".to_sym, layout: :main_layout
+  end
+end
+
+def render_subpage
+  if nonexistent_role?
+    redirect '/'
+  elsif nonexistent_page?
+    status 404
+  else
+    erb "#{@role}_#{@page}_#{@subpage}".to_sym, layout: :main_layout
   end
 end
 
@@ -49,6 +67,10 @@ helpers do
     path = "data/#{filename}"
     content = File.read path
     render_markdown content
+  end
+
+  def child_pages? page_hash
+    !!page_hash['pages']
   end
 
   def page_path(page_hash)
@@ -82,5 +104,13 @@ get '/:role/:page' do
   @role = params[:role]
   @page = params[:page]
 
-  render_role_subpage
+  render_role_page
+end
+
+get '/:role/:page/:subpage' do
+  @role = params[:role]
+  @page = params[:page]
+  @subpage = params[:subpage]
+
+  render_subpage
 end

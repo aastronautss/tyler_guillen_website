@@ -32,7 +32,20 @@
           <ul>
             <% SITEMAP[@role]["pages"].each do |page_hash| %>
               <li>
-                <a href="<%= page_path page_hash %>"><%= page_hash['name'] %></a>
+                <% if child_pages? page_hash %>
+                  <a href="#" class="nav-parent"><%= page_hash['name'] %></a>
+                  <ul class="sub-menu">
+                    <% page_hash['pages'].each do |subpage_hash| %>
+                      <li>
+                        <a href="/<%= @role %>/<%= page_hash['path'] %>/<%= subpage_hash['path'] %>">
+                         <%= subpage_hash['name'] %>
+                        </a>
+                      </li>
+                    <% end %>
+                  </ul>
+                <% else %>
+                  <a href="<%= page_path page_hash %>"><%= page_hash['name'] %></a>
+                <% end %>
               </li>
             <% end %>
           </ul>

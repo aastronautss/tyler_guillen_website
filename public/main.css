@@ -70,11 +70,27 @@ header nav {
 
 header li {
   display: inline-block;
+  position: relative;
   margin: 0 5px 0 5px;
 }
 
 header li:last-child {
   margin-right: 0;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  text-align: center;
+  margin: 5px auto 0 auto;
+  padding: 4px;
+  background: rgba(0, 0, 0, .1);
+  color: #aaa;
+  font-size: 1.1em;
+}
+
+.sub-menu li {
+  display: block;
 }
 
 main {

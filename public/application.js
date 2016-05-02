@@ -1,5 +1,13 @@
 $(function() {
-  var photo_tile = {
+  $(".nav-parent").on('click', function(e) {
+    e.preventDefault();
+    $parent = $(e.target);
+    $list = $parent.next("ul");
+
+    $list.fadeToggle();
+  });
+
+  /* var photo_tile = {
     $tiles: $(".photo_tile"),
 
     bind: function() {
@@ -13,5 +21,5 @@ $(function() {
     init: function() {
       this.bind();
     }
-  };
+  }; */
 });
