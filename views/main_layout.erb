@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="en-US">
   <head>
-    <title>Tyler Guillen is a <%= JOBS[@role] %>.</title>
+    <title>Tyler Guillen is a <%= SITEMAP[@role]["name"] %>.</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="/reset.css">
     <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Lora:400,400i:f">
     <link rel="stylesheet" type="text/css" href="/main.css">
-    <%= yield_content :custom_styles %>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="/application.css"></script>
+    <%= yield_content :custom_styles_and_scripts %>
   </head>
   <body>
     <div id="wrap" class="clearfix">
@@ -14,11 +17,11 @@
         <h1>
           <span class="name">Tyler Guillen</span>
           <span class="italic">is a</span>
-          <span class="job"><%= JOBS[@role] %>.</span>
+          <span class="job"><%= SITEMAP[@role]["name"] %>.</span>
         </h1>
         <nav>
           <ul>
-            <% self.send("#{@role}_links").each do |path, text| %>
+            <% send("#{@role}_links").each do |path, text| %>
               <li>
                 <a href="<%= path %>"><%= text %></a>
               </li>
@@ -33,10 +36,10 @@
     <footer>
       <nav>
         <ul>
-          <% JOBS.each do |role, text| %>
+          <% SITEMAP.each do |role, hash| %>
             <li>
-              <a href="/<%= role.to_s %>">
-                <%= text %>
+              <a href="/<%= role %>">
+                <%= hash["name"] %>
               </a>
             </li>
           <% end %>

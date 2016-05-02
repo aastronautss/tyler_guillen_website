@@ -58,7 +58,8 @@ h1 .job {
 h2 {
   text-align: center;
   letter-spacing: .1em;
-  font-size: 1.3em;
+  font-size: 1.6em;
+  text-transform: lowercase;
   font-variant: small-caps;
 }
 
@@ -96,6 +97,7 @@ main {
 .contact-info dt {
   margin: 0 0 5px 0;
   color: #999;
+  text-transform: lowercase;
   font-variant: small-caps;
   letter-spacing: .1em;
 }
