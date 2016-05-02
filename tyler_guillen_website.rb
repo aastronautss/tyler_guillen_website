@@ -2,15 +2,23 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'sinatra/content_for'
 require 'tilt/erubis'
+require 'redcarpet'
 require 'yaml'
 
-SITEMAP = YAML.load_file('./data/sitemap.yml').freeze
-
 set :bind, '0.0.0.0' if development?
+
+@root = File.expand_path("..", __FILE__)
+
+SITEMAP = YAML.load_file(@root + '/data/sitemap.yml').freeze
 
 # ====------------------====
 # Auxilliary Functions
 # ====------------------====
+
+def render_markdown(text)
+  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+  markdown.render text
+end
 
 def nonexistent_role?
   !SITEMAP.keys.include? @role
@@ -37,6 +45,12 @@ end
 # ====------------------====
 
 helpers do
+  def render_content(filename)
+    path = "data/#{filename}"
+    content = File.read path
+    render_markdown content
+  end
+
   def page_path(page_hash)
     "/#{@role}/#{page_hash['path']}"
   end
