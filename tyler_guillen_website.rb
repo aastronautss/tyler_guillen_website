@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
+require 'pry' if development?
 require 'sinatra/content_for'
 require 'tilt/erubis'
 require 'redcarpet'
@@ -20,41 +21,37 @@ def render_markdown(text)
   markdown.render text
 end
 
-# TODO: DRY up the 'not found' logic.
-
-def nonexistent_role?
-  !SITEMAP.keys.include? @role
+def find_section dir
+  path = dir[0]
+  SITEMAP.find { |section| section['path'] == path }
 end
 
-def nonexistent_page?
-  pages = SITEMAP[@role]['pages']
-  paths = pages.map { |page| page['path'] }
-  !paths.include? @page
-end
-
-def nonexistent_subpage?
-  pages = SITEMAP[@role][@page]['pages']
-  paths = pages.map { |page| page['path'] }
-  !paths.include? @page
-end
-
-def render_role_page
-  if nonexistent_role?
-    redirect '/'
-  elsif nonexistent_page?
-    status 404
+def find_page dir
+  path = dir[1]
+  if @section
+    @section['pages'].find { |page| page['path'] == path }
   else
-    erb "#{@role}_#{@page}".to_sym, layout: :main_layout
+    nil
   end
 end
 
-def render_subpage
-  if nonexistent_role?
-    redirect '/'
-  elsif nonexistent_page?
-    status 404
+def valid_dir? dir, pages = SITEMAP
+  return true if pages.nil? || dir.empty?
+
+  aux_dir = dir.clone
+  node = aux_dir.shift
+  pages.any? do |page|
+    page['path'] == node && valid_dir?(aux_dir, page['pages'])
+  end
+end
+
+def render_dir(dir)
+  if valid_dir? dir
+    @section = find_section dir
+    @page = find_page dir
+    erb dir.join('_').to_sym, layout: :main_layout
   else
-    erb "#{@role}_#{@page}_#{@subpage}".to_sym, layout: :main_layout
+    status 404
   end
 end
 
@@ -74,7 +71,7 @@ helpers do
   end
 
   def page_path(page_hash)
-    "/#{@role}/#{page_hash['path']}"
+    "/#{@section['path']}/#{page_hash['path']}"
   end
 end
 
@@ -83,34 +80,14 @@ end
 # ====------------------====
 
 not_found do
-  @role ? erb("#{@role}_not_found".to_sym, layout: :main_layout) : redirect('/')
+  redirect '/'
 end
 
 get '/' do
   erb :splash, layout: :splash_layout
 end
 
-get '/:role' do
-  @role = params[:role]
-
-  if SITEMAP.keys.include? @role
-    erb @role.to_sym, layout: :main_layout
-  else
-    redirect '/'
-  end
-end
-
-get '/:role/:page' do
-  @role = params[:role]
-  @page = params[:page]
-
-  render_role_page
-end
-
-get '/:role/:page/:subpage' do
-  @role = params[:role]
-  @page = params[:page]
-  @subpage = params[:subpage]
-
-  render_subpage
+get %r{/([\w\/]*)} do
+  dir = params[:captures][0].split('/')
+  render_dir dir
 end

@@ -3,11 +3,11 @@
   <head>
     <title>
       <% if @page %>
-        <%= @page.capitalize %> |
+        <%= @page['name'] %> |
       <% end %>
-      Tyler Guillen is a <%= SITEMAP[@role]["name"] %>
+      Tyler Guillen is a <%= @section['name'] %>
     </title>
-    <meta name="description" content="<%= SITEMAP[@role]["description"] %>">
+    <meta name="description" content="<%= @section['description'] %>">
     <meta charset="UTF-8" />
 
     <link rel="stylesheet" type="text/css" href="/reset.css">
@@ -22,22 +22,22 @@
     <div id="wrap" class="clearfix">
       <header class="clearfix">
         <h1>
-          <a href="<%= "/#{@role}" %>">
+          <a href="<%= "/#{@section['path']}" %>">
             <span class="name">Tyler Guillen</span>
             <span class="italic">is a</span>
-            <span class="job"><%= SITEMAP[@role]["name"] %>.</span>
+            <span class="job"><%= @section['name'] %>.</span>
           </a>
         </h1>
         <nav>
           <ul>
-            <% SITEMAP[@role]["pages"].each do |page_hash| %>
+            <% @section['pages'].each do |page_hash| %>
               <li>
                 <% if child_pages? page_hash %>
                   <a href="#" class="nav-parent"><%= page_hash['name'] %></a>
                   <ul class="sub-menu">
                     <% page_hash['pages'].each do |subpage_hash| %>
                       <li>
-                        <a href="/<%= @role %>/<%= page_hash['path'] %>/<%= subpage_hash['path'] %>">
+                        <a href="/<%= @section['path'] %>/<%= page_hash['path'] %>/<%= subpage_hash['path'] %>">
                          <%= subpage_hash['name'] %>
                         </a>
                       </li>
@@ -58,10 +58,10 @@
     <footer>
       <nav>
         <ul>
-          <% SITEMAP.each do |role, hash| %>
+          <% SITEMAP.each do |section| %>
             <li>
-              <a href="/<%= role %>">
-                <%= hash["name"] %>
+              <a href="/<%= section['path'] %>">
+                <%= section['name'] %>
               </a>
             </li>
           <% end %>
