@@ -68,13 +68,13 @@ header nav {
   float: right;
 }
 
-header li {
+.main-nav > li {
   display: inline-block;
   position: relative;
   margin: 0 5px 0 5px;
 }
 
-header li:last-child {
+.main-nav > li:last-child {
   margin-right: 0;
 }
 
@@ -83,13 +83,12 @@ header li:last-child {
   position: absolute;
   text-align: center;
   margin: 5px auto 0 auto;
-  padding: 4px;
-  background: rgba(0, 0, 0, .1);
+  padding: 6px;
+  background: #eee;
   color: #aaa;
-  font-size: 1.1em;
 }
 
-.sub-menu li {
+.sub-menu a {
   display: block;
 }
 

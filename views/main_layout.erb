@@ -21,52 +21,15 @@
   <body>
     <div id="wrap" class="clearfix">
       <header class="clearfix">
-        <h1>
-          <a href="<%= "/#{@section['path']}" %>">
-            <span class="name">Tyler Guillen</span>
-            <span class="italic">is a</span>
-            <span class="job"><%= @section['name'] %>.</span>
-          </a>
-        </h1>
-        <nav>
-          <ul>
-            <% @section['pages'].each do |page_hash| %>
-              <li>
-                <% if child_pages? page_hash %>
-                  <a href="#" class="nav-parent"><%= page_hash['name'] %></a>
-                  <ul class="sub-menu">
-                    <% page_hash['pages'].each do |subpage_hash| %>
-                      <li>
-                        <a href="/<%= @section['path'] %>/<%= page_hash['path'] %>/<%= subpage_hash['path'] %>">
-                         <%= subpage_hash['name'] %>
-                        </a>
-                      </li>
-                    <% end %>
-                  </ul>
-                <% else %>
-                  <a href="<%= page_path page_hash %>"><%= page_hash['name'] %></a>
-                <% end %>
-              </li>
-            <% end %>
-          </ul>
-        </nav>
+        <%= erb :_heading %>
+        <%= erb :_nav %>
       </header>
       <main class="clearfix">
         <%= yield %>
       </main>
     </div>
     <footer>
-      <nav>
-        <ul>
-          <% SITEMAP.each do |section| %>
-            <li>
-              <a href="/<%= section['path'] %>">
-                <%= section['name'] %>
-              </a>
-            </li>
-          <% end %>
-        </ul>
-      </nav>
+      <%= erb :_bottom_nav %>
     </footer>
   </body>
 </html>

@@ -1,6 +1,8 @@
 require 'sinatra'
+
 require 'sinatra/reloader' if development?
 require 'pry' if development?
+
 require 'sinatra/content_for'
 require 'tilt/erubis'
 require 'redcarpet'
@@ -85,6 +87,15 @@ end
 
 get '/' do
   erb :splash, layout: :splash_layout
+end
+
+get '/wedding' do
+  erb :wedding
+end
+
+post '/wedding' do
+  "#{params}"
+  # erb :wedding_thank_you
 end
 
 get %r{/([\w\/]*)} do

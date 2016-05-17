@@ -1,10 +1,8 @@
 $(function() {
-  $(".nav-parent").on('click', function(e) {
-    e.preventDefault();
-    $parent = $(e.target);
-    $list = $parent.next("ul");
-
-    $list.fadeToggle();
+  $(".nav-parent").hover(function() {
+    $(this).children('.sub-menu').fadeIn();
+  }, function() {
+    $(this).children('.sub-menu').fadeOut();
   });
 
   /* var photo_tile = {
