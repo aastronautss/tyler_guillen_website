@@ -57,6 +57,10 @@ form {
   display: none;
 }
 
+[disabled] {
+
+}
+
 input[type=text] {
   color: #444;
   font: italic 400 30px Cormorant, serif;

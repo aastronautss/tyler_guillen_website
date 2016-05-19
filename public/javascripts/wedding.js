@@ -50,10 +50,6 @@ app.Guests = Backbone.Collection.extend({
   model: app.Guest,
   last_id: 0,
 
-  events: {
-    'change': 'updateButton'
-  },
-
   updateButton: function() {
     $('#add_guest').prop('disabled', this.length >= 5);
   },
@@ -79,9 +75,15 @@ app.GuestView = Backbone.View.extend({
     'click a.delete': 'remove'
   },
 
+  clear: function() {
+    app.guests.updateButton();
+    this.$el.remove();
+  },
+
   remove: function() {
     var id = +this.$el.data('id');
     this.model.collection.remove(id);
+    app.guests.updateButton();
     this.$el.remove();
   },
 
@@ -94,41 +96,8 @@ app.GuestView = Backbone.View.extend({
     this.template = app.templates.guest;
     this.render();
     this.listenTo(this.model, 'remove', this.remove);
-    this.listenTo(this.model.collection, 'reset', this.remove);
+    this.listenTo(this.model.collection, 'reset', this.clear);
   }
 });
 
 $(function() { app.init(); });
-
-/* $(function() {
-  var templates = {},
-      $guest_forms = $('#guest_forms');
-
-  function cacheTemplates() {
-    $('[type="text/x-handlebars"]').each(function() {
-      templates[$(this).attr('id')] = Handlebars.compile($(this).html());
-    });
-  }
-
-  function renderGuestForms(size) {
-    var $el = $('<div />')
-    for (var i = 1; i <= size; i++) {
-      $el.append(templates.guest(i));
-    }
-    $guest_forms.html($el.html());
-
-    $('.optional').toggle(size > 0);
-  }
-
-  $('[name=guests]').on('change', function() {
-    var size = +$(this).val();
-    renderGuestForms(size);
-  });
-
-  $(':radio').on('change', function() {
-    var val = $(':radio:checked').val();
-    $('#plus_one').slideToggle(val === 'true');
-  });
-
-  cacheTemplates();
-}); */
