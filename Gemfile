@@ -8,6 +8,10 @@ gem "erubis"
 gem 'cloudinary'
 gem 'redcarpet'
 
+group :development do
+  gem 'pry'
+end
+
 group :production do
   gem 'puma'
 end
