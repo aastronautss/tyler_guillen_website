@@ -4,44 +4,52 @@
     <title>Allison and Tyler are getting married!</title>
     <meta charset="UTF-8" />
 
-    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/reset.css">
     <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Cormorant:400,700,400i,700i/Roboto:300i">
-    <link rel="stylesheet" type="text/css" href="wedding.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/wedding.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.2/backbone-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-    <script src="wedding.js"></script>
+    <script src="/javascripts/wedding.js"></script>
   </head>
   <body>
   <main>
-    <h1>RSVP</h1>
+
+    <hr>
+
+    <header>
+      <h1>RSVP</h1>
+      <p>Please respond by 25 August 2016</p>
+    </header>
 
     <form action="/wedding" method="post">
       <fieldset>
-        <div class="row">
-          <label for="name">m</label>
-          <input type="text" name="name" id="name" required>
+        <div class="row field">
+          <label for="name" class="hide">Your Name</label>
+          <input type="text" name="name" id="name" placeholder="m" required>
         </div>
 
         <div class="row">
           <label>
             <input type="radio" name="attending" value="true" checked>I will gladly attend.
           </label>
-        </div>
-        <div class="row">
           <label>
             <input type="radio" name="attending" value="false">I will regretfully not attend.
           </label>
         </div>
 
+        <hr>
+
         <div class="row" id="plus_one">
-          <button id="add_guest">Add Guest</button>
           <div class="row">
-            <label>Guests</label>
+            <h2>Guests</h2>
           </div>
-          <ul class="row" id="guest_forms"></ul>
+          <div class="row">
+            <button id="add_guest">Add Guest</button>
+            <ul class="row" id="guest_forms"></ul>
+          </div>
         </div>
 
         <div class="row">
@@ -52,8 +60,8 @@
   </main>
 
     <script type="text/x-handlebars" id="guest">
-        <label for="guest_{{id}}">m</label>
-        <input type="text" name="guest_{{id}}" id="guest_{{id}}" required>
+        <label for="guest_{{id}}" class="hide">Guest's Name</label>
+        <input type="text" name="guest_{{id}}" id="guest_{{id}}" placeholder="m" required>
         <a href="#" class="delete">Remove</a>
     </script>
   </body>

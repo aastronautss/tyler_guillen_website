@@ -86,7 +86,6 @@ not_found do
 end
 
 get '/' do
-  puts ENV['RACK_ENV']
   erb :splash, layout: :splash_layout
 end
 

@@ -1,0 +1,93 @@
+body {
+  color: #666;
+  font: 400 20px Cormorant, serif;
+}
+
+main {
+  width: 500px;
+  margin: 0 auto;
+}
+
+hr {
+  height: 6px;
+  background: url(/images/wedding_hr.png) repeat-x 0 0;
+  border: 0;
+}
+
+fieldset hr {
+  margin: 25px 0 25px 0;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+header p {
+  color: #aaa;
+}
+
+a {
+  text-decoration: none;
+  color: #444;
+}
+
+form {
+  text-align: center;
+}
+
+.row + .row {
+  margin: 20px 0 0 0;
+}
+
+.optional {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+input[type=text] {
+  color: #444;
+  font: italic 400 30px Cormorant, serif;
+  margin-top: 10px;
+  border: none;
+  border-bottom: dotted 2px #aaa;
+  width: 300px;
+}
+
+input:focus,
+button:focus {
+  outline: 0;
+}
+
+input[type=submit],
+button {
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background: #eee;
+  color: #444;
+  font: 400 20px Cormorant, serif;
+}
+
+.delete {
+  margin-left: 5px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  text-indent: -8685px;
+  overflow: hidden;
+  background: transparent url("/images/wedding_x.png") 0 0 no-repeat;
+}
