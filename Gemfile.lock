@@ -12,15 +12,16 @@ GEM
     ffi (1.9.10-x86-mingw32)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
+    kgio (2.10.0)
     mime-types (2.99.1)
     multi_json (1.11.2)
     netrc (0.11.0)
-    puma (3.1.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    raindrops (0.16.0)
     redcarpet (3.3.4)
     rest-client (1.8.0)
       http-cookie (>= 1.0.2, < 2.0)
@@ -47,6 +48,9 @@ GEM
       unf_ext
     unf_ext (0.0.7.2)
     unf_ext (0.0.7.2-x86-mingw32)
+    unicorn (5.1.0)
+      kgio (~> 2.6)
+      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
@@ -55,10 +59,13 @@ PLATFORMS
 DEPENDENCIES
   cloudinary
   erubis
-  puma
   redcarpet
   sinatra (~> 1.4.6)
   sinatra-contrib
+  unicorn
+
+RUBY VERSION
+   ruby 2.3.0p0
 
 BUNDLED WITH
-   1.11.2
+   1.12.4
