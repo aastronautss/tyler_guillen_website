@@ -32,7 +32,7 @@ var app = {
     this.guests = new this.Guests();
     this.bind();
 
-    $('#name').focus();
+    // $('#name').focus();
   }
 };
 
@@ -80,7 +80,8 @@ app.GuestView = Backbone.View.extend({
     this.$el.remove();
   },
 
-  remove: function() {
+  remove: function(e) {
+    if (e.preventDefault) { e.preventDefault(); }
     var id = +this.$el.data('id');
     this.model.collection.remove(id);
     app.guests.updateButton();
