@@ -74,6 +74,22 @@ header p {
   color: #aaa;
 }
 
+.date,
+.time {
+  text-align: center;
+}
+
+.date {
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+.time {
+  font-size: 25px;
+  margin-top: -10px;
+  padding-bottom: 10px;
+}
+
 article h2 {
   padding: 0 0 10px 0;
 }
@@ -214,6 +230,43 @@ button:disabled {
   text-indent: -8685px;
   overflow: hidden;
   background: transparent url("/images/wedding_x.png") 0 0 no-repeat;
+}
+
+.thank-you {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  padding: 16% 0 0 0;
+  width: 600px;
+
+  text-align: center;
+}
+
+.thank-you h1 {
+  font-size: 150px;
+}
+
+.thank-you p {
+  margin-bottom: 15px;
+}
+
+.thank-you li {
+  color: #7ccecd;
+  font: 400 32px bebas-neue, sans-serif;
+}
+
+.thank-you ul {
+  margin-bottom: 10px;
+}
+
+.thank-you .links {
+  margin-top: 30px;
+}
+
+.thank-you .button {
+  display: inline-block;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {

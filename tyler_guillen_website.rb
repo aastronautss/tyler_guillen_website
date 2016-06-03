@@ -7,6 +7,7 @@ require 'sinatra/content_for'
 require 'tilt/erubis'
 require 'redcarpet'
 require 'yaml'
+require 'json'
 
 set :bind, '0.0.0.0' if development?
 
@@ -57,6 +58,16 @@ def render_dir(dir)
   end
 end
 
+def wedding_add_guest(guest_info)
+  list_path = 'forms/wedding.json'
+  guest_list = JSON.parse(File.read list_path)
+  guest_list << guest_info
+
+  File.open(list_path, 'w+') do |f|
+    f.write(JSON.generate guest_list)
+  end
+end
+
 # ====------------------====
 # View Helpers
 # ====------------------====
@@ -74,6 +85,14 @@ helpers do
 
   def page_path(page_hash)
     "/#{@section['path']}/#{page_hash['path']}"
+  end
+
+  def wedding_get_attendees(guest_info)
+    list = [guest_info['name']]
+    guest_keys = guest_info.keys.select { |key| key.match /^guest/ }
+    guest_keys.each { |key| list << guest_info[key] }
+
+    list
   end
 end
 
@@ -94,8 +113,9 @@ get '/wedding' do
 end
 
 post '/wedding' do
-  "#{params}"
-  # erb :wedding_thank_you
+  wedding_add_guest params
+
+  erb :wedding_thank_you, locals: { guest_info: params }
 end
 
 get %r{/([\w\/]*)} do
