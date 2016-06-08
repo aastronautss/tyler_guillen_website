@@ -111,10 +111,23 @@ article p span {
   color: #7ccecd;
 }
 
-section img {
+.portrait {
+  background: url("http://res.cloudinary.com/aastronautss/image/upload/c_scale,q_100,w_500/v1464659784/2013-05-26_08.05.57_ssdwm9.jpg") 50% 50% no-repeat;
+}
+
+.bejgli {
+  background: url("http://res.cloudinary.com/aastronautss/image/upload/c_scale,h_375/v1464659812/IMG_20160530_110931_kc6nui.jpg") 50% 50% no-repeat;
+}
+
+.circle.image {
+  border-radius: 100%;
+  width: 375px;
+  height: 375px;
+  overflow: hidden;
+  display: block;
   text-align: center;
-  margin: 20px auto;
-  border-radius: 5px;
+  margin: 25px auto;
+  /*border-radius: 5px;*/
 }
 
 .address {
