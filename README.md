@@ -1,11 +1,24 @@
-# tyler\_guillen\_website
+# README
 
-This is the main repository for the Sinatra application that powers my professional website. It is a work in progress.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## Todo
+Things you may want to cover:
 
-* DRY up `main_layout.erb`
-* Create slideshow and tiles for photo page
-* Make About pages for `phil` and `webdev`
-* Compile content for `phil` and `webdev` and decide how to display it
-* Create responsive breakpoints
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
