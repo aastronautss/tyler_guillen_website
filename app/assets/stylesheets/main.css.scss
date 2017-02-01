@@ -1,0 +1,60 @@
+main {
+  &.front {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    font-family: 'Aleo', sans-serif;
+    color: #4a4a4a;
+
+    a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    .centered-vert {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+
+      &.centered-optically {
+        top: 45%;
+      }
+    }
+
+    .centered-horiz {
+      text-align: center;
+    }
+
+    h1 {
+      display: inline-block;
+      margin: 0;
+      text-align: right;
+    }
+
+    nav {
+      display: inline-block;
+      margin-left: 25px;
+      text-align: left;
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .active {
+        &::before {
+
+        }
+      }
+    }
+  }
+}

@@ -1,2 +1,13 @@
-= link_to 'Home', root_path
-About
+= content_for :additional_stylesheets do
+  = stylesheet_link_tag 'application', '//brick.a.ssl.fastly.net/Aleo:400'
+
+%main.front
+  .centered-vert.centered-horiz.centered-optically
+    %h1.centered-vert Tyler Guillen
+
+    %nav
+      %ul.navbar
+        %li= link_to 'Home', root_path
+        %li.active About
+        %li Foo
+        %li Bar
