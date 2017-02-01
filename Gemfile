@@ -14,7 +14,6 @@ gem 'coffee-rails', '~> 4.2'
 
 # FE Libraries
 gem 'jquery-rails'
-gem 'turbolinks', '~> 5'
 gem 'autoprefixer-rails'
 
 # BE Libraries

@@ -17,6 +17,14 @@ main {
       text-decoration: none;
     }
 
+    p {
+      margin: 0;
+
+      & + p {
+        margin-top: 10px;
+      }
+    }
+
     .centered-vert {
       position: relative;
       top: 50%;
@@ -39,6 +47,13 @@ main {
       text-align: right;
     }
 
+    h2 {
+      margin: 0;
+      text-align: center;
+      font-size: 1.3em;
+      color: #666;
+    }
+
     nav {
       display: inline-block;
       margin-left: 25px;
@@ -53,6 +68,47 @@ main {
       .active {
         &::before {
 
+        }
+      }
+    }
+
+    .lower-content {
+      position: relative;
+      top: 60%;
+      margin: 0 auto;
+      padding-bottom: 45px;
+      width: 400px;
+
+      // Page Load
+      opacity: 0;
+      -webkit-transition: opacity 0.5s ease-in;
+         -moz-transition: opacity 0.5s ease-in;
+          -ms-transition: opacity 0.5s ease-in;
+           -o-transition: opacity 0.5s ease-in;
+              transition: opacity 0.5s ease-in;
+
+      &.load {
+        opacity: 1;
+      }
+
+      .contact-links {
+        text-align: center;
+
+        h2 {
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          margin: 15px 0 5px 0;
+          font-size: 1.1em;
+          color: #aaa;
+        }
+
+        p {
+          i {
+            font-style: normal;
+            color: #999;
+          }
         }
       }
     }
