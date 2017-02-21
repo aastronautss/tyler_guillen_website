@@ -1,0 +1,10 @@
+.centered-vert.centered-horiz.centered-optically
+  %h1.centered-vert Tyler Guillen
+
+  %nav
+    %ul.navbar
+      - @pages.each do |page, data|
+        - if page == active_page
+          %li.active= data[:title]
+        - else
+          %li= link_to data[:title], page_path(page)

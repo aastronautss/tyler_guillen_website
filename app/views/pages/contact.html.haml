@@ -1,36 +1,24 @@
 = content_for :additional_stylesheets do
   = stylesheet_link_tag 'application', '//brick.a.ssl.fastly.net/Aleo:300,400,700'
 
-%main.front
-  .centered-vert.centered-horiz.centered-optically
-    %h1.centered-vert Tyler Guillen
-
-    %nav
-      %ul.navbar
-        %li= link_to 'Home', root_path
-        %li= link_to 'Web Development', page_path('webdev')
-        %li= link_to 'Photography', page_path('photography')
-        %li.active Contact
-
-  .lower-content
-    %h2 Where to find me
-    .contact-links
-      %h3 Email
-      %p
-        tyler
-        %i at
-        tylerguillen
-        %i dot
-        com
-      %h3 Blog
-      %p
-        = link_to 'blog.tylerguillen.com', 'http://blog.tylerguillen.com'
-      %h3 GitHub
-      %p
-        = link_to 'aastronautss', 'https://github.com/aastronautss'
-      %h3 Flickr
-      %p
-        = link_to 'aastronautss', 'https://www.flickr.com/photos/linkie0'
-      %h3 Instagram
-      %p
-        = link_to '@aastronautss', 'https://www.instagram.com/aastronautss'
+%h2 Where to find me
+.contact-links
+  %h3 Email
+  %p
+    tyler
+    %i at
+    tylerguillen
+    %i dot
+    com
+  %h3 Blog
+  %p
+    = link_to 'blog.tylerguillen.com', 'http://blog.tylerguillen.com'
+  %h3 GitHub
+  %p
+    = link_to 'aastronautss', 'https://github.com/aastronautss'
+  %h3 Flickr
+  %p
+    = link_to 'aastronautss', 'https://www.flickr.com/photos/linkie0'
+  %h3 Instagram
+  %p
+    = link_to '@aastronautss', 'https://www.instagram.com/aastronautss'
