@@ -5,8 +5,8 @@ deployment:
   production:
     branch: master
     commands:
-      - heroku maintenance:on --app tyler_guillen_website
-      - heroku pg:backups capture --app tyler_guillen_website
-      - git push git@heroku.com:tyler_guillen_website.git $CIRCLE_SHA1:refs/heads/master
-      - heroku run rake db:migrate --app tyler_guillen_website
-      - heroku maintenance:off --app tyler_guillen_website
+      - heroku maintenance:on --app tylerguillen
+      - heroku pg:backups capture --app tylerguillen
+      - git push git@heroku.com:tylerguillen.git $CIRCLE_SHA1:refs/heads/master
+      - heroku run rake db:migrate --app tylerguillen
+      - heroku maintenance:off --app tylerguillen
