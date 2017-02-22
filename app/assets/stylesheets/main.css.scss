@@ -98,6 +98,36 @@ main {
         opacity: 1;
       }
 
+      .photo-set-tile-group {
+        width: 100%;
+
+        .photo-set-tile {
+          display: block;
+          width: 100%;
+          height: 75px;
+
+          text-align: center;
+          vertical-align: middle;
+          line-height: 62px;
+          font-size: 1.5em;
+          letter-spacing: .3em;
+
+          background: #aaa;
+          color: #fff;
+
+          span {
+            display: inline;
+            display: inline-table;
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          & + .photo-set-tile {
+            margin-top: 10px;
+          }
+        }
+      }
+
       .contact-links {
         text-align: center;
 

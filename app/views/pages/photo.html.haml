@@ -1,2 +1,7 @@
 = content_for :additional_stylesheets do
   = stylesheet_link_tag 'application', '//brick.a.ssl.fastly.net/Aleo:300,400,700'
+
+.photo-set-tile-group
+  - @pages['photo'][:pages].each do |page, data|
+    = link_to page_path("photo/#{page}"), class: 'photo-set-tile' do
+      %span= data[:title]

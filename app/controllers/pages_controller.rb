@@ -11,7 +11,24 @@ class PagesController < ApplicationController
     },
 
     'photo' => {
-      title: 'Photography'
+      title: 'Photography',
+      pages: {
+        'emergence' => {
+          title: 'Emergence'
+        },
+
+        'takoma' => {
+          title: 'Takoma'
+        },
+
+        'shores' => {
+          title: 'Shores'
+        },
+
+        'weddings' => {
+          title: 'Weddings'
+        }
+      }
     },
 
     'contact' => {
