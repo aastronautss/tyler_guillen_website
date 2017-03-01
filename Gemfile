@@ -32,6 +32,8 @@ group :development, :test do
   gem 'pry-nav'
   gem 'rspec-rails'
   gem 'rails-controller-testing'
+  gem 'fabrication'
+  gem 'faker'
   gem 'byebug', platform: :mri
 end
 
