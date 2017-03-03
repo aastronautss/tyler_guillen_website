@@ -28,6 +28,11 @@ describe Post do
         post.publish!
         expect(post.reload.date_published).to be_present
       end
+
+      it 'sets :blurb' do
+        post.publish!
+        expect(post.reload.blurb).to be_present
+      end
     end
 
     context 'with a blank field' do
