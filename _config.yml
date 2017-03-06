@@ -1,9 +1,21 @@
 permalink: pretty
+gems:
+  - jekyll-paginate
 
 defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: /blog/:year/:month/:day/:title/
+      layout: post
+      assets: blog
+      excerpt_separator: <!-- more -->
   -
     scope:
       path: ""
     values:
       layout: main
       assets: main
+

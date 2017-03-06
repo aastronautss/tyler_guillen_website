@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Mate:400,400i|Open+Sans:300,300i,400,400i,600,600i,700,700i');
 
 main {
   &.front {
@@ -11,7 +11,7 @@ main {
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
 
-    font-family: "Libre Baskerville", sans-serif;
+    font-family: "Mate", sans-serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 1.3em;
@@ -50,7 +50,7 @@ main {
       display: inline-block;
       margin: 0;
 
-      font-family: Futura, "Trebushet MS", Arial, sans-serif;
+      font-family: Futura, "Open Sans", "Trebushet MS", Arial, sans-serif;
       text-align: right;
       font-size: 2.5em;
       font-weight: medium;
@@ -58,17 +58,25 @@ main {
 
     h2 {
       margin: 0;
-      font-family: Futura, "Trebushet MS", Arial, sans-serif;
+      font-family: Futura, "Open Sans", "Trebushet MS", Arial, sans-serif;
       text-align: center;
       font-size: 1.5em;
       font-weight: 400;
       color: #666;
     }
 
+    h3 {
+      font-family: Futura, "Open Sans", "Trebushet MS", Arial, sans-serif;
+      font-size: 1.1em;
+      font-weight: 400;
+      color: #aaa;
+    }
+
     nav {
       display: inline-block;
       margin-left: 25px;
       width: 148px;
+      font-family: 'Open Sans', sans-serif;
       text-align: left;
 
       ul {
@@ -78,7 +86,7 @@ main {
       }
 
       .active {
-        font-weight: 700;
+        font-weight: 600;
 
         &::before {
 
@@ -113,7 +121,7 @@ main {
           width: 100%;
           height: 75px;
 
-          font-family: Futura, "Trebushet MS", Arial, sans-serif;
+          font-family: Futura, "Open Sans", "Trebushet MS", Arial, sans-serif;
           text-align: center;
           vertical-align: middle;
           line-height: 62px;
@@ -136,6 +144,37 @@ main {
         }
       }
 
+      .blog-summaries {
+        margin-top: 10px;
+
+        .blog-summary {
+          h3 {
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 1em;
+          }
+
+          .post-date {
+            display: inline-block;
+            margin-left: 5px;
+            font-style: italic;
+            color: #888;
+          }
+
+          .post-excerpt {
+            display: block;
+          }
+
+          .post-more a {
+            color: #888;
+          }
+
+          & + .blog-summary {
+            margin-top: 20px;
+          }
+        }
+      }
+
       .contact-links {
         text-align: center;
 
@@ -145,10 +184,6 @@ main {
 
         h3 {
           margin: 15px 0 5px 0;
-          font-family: Futura, "Trebushet MS", Arial, sans-serif;
-          font-size: 1.1em;
-          font-weight: 400;
-          color: #aaa;
         }
 
         p {

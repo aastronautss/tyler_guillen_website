@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    {% include stylesheet_tags.html %}
+    {% include javascript_tags.html %}
+  </head>
+
+  <body>
+    <main class="fade-on-leave">
+      <div class="back-to-main">
+        <a class="leave-layout" href="{{ site.url }}/blog/">Back to blog...</a>
+      </div>
+
+      <article>
+        <header>
+          <h1>{{ page.title }}</h1>
+          {% if page.subtitle %}
+            <div class="post-subtitle">
+              {{ page.subtitle }}
+            </div>
+          {% endif %}
+
+          <div class="post-date">
+            <time datetime="{{ page.date }}">
+              {{ page.date | date_to_long_string }}
+            </time>
+          </div>
+        </header>
+
+        <div class="post-content">{{ content }}</div>
+
+        <div class="filed-in">
+          Filed in <span class="category">{{ page.category }}</span>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

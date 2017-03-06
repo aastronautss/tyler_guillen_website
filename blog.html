@@ -1,0 +1,34 @@
+---
+title: Blog
+nav_sort: 3
+---
+
+<h2>Recent Posts</h2>
+
+<div class="blog-summaries">
+  {% for post in site.posts %}
+    <div class="blog-summary">
+      <h3>
+        <a href="{{ post.url }}" class="leave-layout">
+          {{ post.title }}
+        </a>
+      </h3>
+
+      &#9702;
+
+      <span class="post-date">
+        {{ post.date | date_to_long_string }}
+      </span>
+
+      <span class="post-excerpt">
+        {{ post.excerpt | remove: "<p>" | remove: "</p>"}}
+
+        <span class="post-more">
+          <a class="leave-layout" href="{{ post.url }}">
+            Read more...
+          </a>
+        </span>
+      </span>
+    </div>
+  {% endfor %}
+</div>
