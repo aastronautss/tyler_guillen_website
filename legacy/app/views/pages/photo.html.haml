@@ -1,0 +1,4 @@
+.photo-set-tile-group
+  - @pages['photo'][:pages].each do |page, data|
+    = link_to page_path("photo/#{page}"), class: 'photo-set-tile leave-main-layout' do
+      %span= data[:title]
