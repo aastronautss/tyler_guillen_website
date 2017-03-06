@@ -1,0 +1,18 @@
+<div class="centered-vert centered-horiz centered-optically">
+  <h1 class="centered-vert centered-optically">
+    Tyler Guillen
+  </h1>
+
+  <nav>
+    <ul class="navbar">
+      {% assign nav_pages = site.html_pages | sort: 'nav_sort' %}
+      {% for p in nav_pages %}
+        {% if p.nav_sort %}
+          <li {% if p.url == page.url %} class="active" {% endif %}>
+            <a href="{{ p.url }}">{{ p.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

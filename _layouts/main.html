@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    {% include stylesheet_tags.html %}
+    {% include javascript_tags.html %}
+  </head>
+
+  <body>
+    <main class="front fade-on-leave">
+      {% include header.html %}
+      <div class="lower-content">
+        {{ page.content }}
+      </div>
+    </main>
+  </body>
+</html>
