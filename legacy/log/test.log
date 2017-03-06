@@ -1,0 +1,824 @@
+  [1m[35m (488.5ms)[0m  [1m[35mCREATE DATABASE "tyler_guillen_website_test" ENCODING = 'unicode'[0m
+  [1m[35m (22.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (18.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1143098430820566150);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", 2017-02-22 00:32:24 UTC], ["updated_at", 2017-02-22 00:32:24 UTC]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1143098430820566150)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (194.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tyler_guillen_website_test"[0m
+  [1m[35m (376.2ms)[0m  [1m[35mCREATE DATABASE "tyler_guillen_website_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", 2017-02-22 00:32:36 UTC], ["updated_at", 2017-02-22 00:32:36 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendering pages/home.html.haml within layouts/application
+  Rendered pages/home.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendering pages/home.html.haml within layouts/application
+  Rendered pages/home.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"webdev"}
+  Rendering pages/webdev.html.haml within layouts/application
+  Rendered pages/webdev.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"webdev"}
+  Rendering pages/webdev.html.haml within layouts/application
+  Rendered pages/webdev.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"photo"}
+  Rendering pages/photo.html.haml within layouts/application
+  Rendered pages/photo.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"photo"}
+  Rendering pages/photo.html.haml within layouts/application
+  Rendered pages/photo.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"contact"}
+  Rendering pages/contact.html.haml within layouts/application
+  Rendered pages/contact.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"contact"}
+  Rendering pages/contact.html.haml within layouts/application
+  Rendered pages/contact.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (186.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tyler_guillen_website_test"[0m
+  [1m[35m (372.3ms)[0m  [1m[35mCREATE DATABASE "tyler_guillen_website_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", 2017-02-22 00:33:15 UTC], ["updated_at", 2017-02-22 00:33:15 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendering pages/home.html.haml within layouts/application
+  Rendered pages/home.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendering pages/home.html.haml within layouts/application
+  Rendered pages/home.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"webdev"}
+  Rendering pages/webdev.html.haml within layouts/application
+  Rendered pages/webdev.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"webdev"}
+  Rendering pages/webdev.html.haml within layouts/application
+  Rendered pages/webdev.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"photo"}
+  Rendering pages/photo.html.haml within layouts/application
+  Rendered pages/photo.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"photo"}
+  Rendering pages/photo.html.haml within layouts/application
+  Rendered pages/photo.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"contact"}
+  Rendering pages/contact.html.haml within layouts/application
+  Rendered pages/contact.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"contact"}
+  Rendering pages/contact.html.haml within layouts/application
+  Rendered pages/contact.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (181.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tyler_guillen_website_test"[0m
+  [1m[35m (358.9ms)[0m  [1m[35mCREATE DATABASE "tyler_guillen_website_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", 2017-02-22 00:34:24 UTC], ["updated_at", 2017-02-22 00:34:24 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendering pages/home.html.haml within layouts/application
+  Rendered pages/home.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendering pages/home.html.haml within layouts/application
+  Rendered pages/home.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"webdev"}
+  Rendering pages/webdev.html.haml within layouts/application
+  Rendered pages/webdev.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"webdev"}
+  Rendering pages/webdev.html.haml within layouts/application
+  Rendered pages/webdev.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"photo"}
+  Rendering pages/photo.html.haml within layouts/application
+  Rendered pages/photo.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"photo"}
+  Rendering pages/photo.html.haml within layouts/application
+  Rendered pages/photo.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"contact"}
+  Rendering pages/contact.html.haml within layouts/application
+  Rendered pages/contact.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"contact"}
+  Rendering pages/contact.html.haml within layouts/application
+  Rendered pages/contact.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (185.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tyler_guillen_website_test"[0m
+  [1m[35m (396.1ms)[0m  [1m[35mCREATE DATABASE "tyler_guillen_website_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", 2017-02-22 00:34:56 UTC], ["updated_at", 2017-02-22 00:34:56 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendering pages/home.html.haml within layouts/application
+  Rendered pages/home.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendering pages/home.html.haml within layouts/application
+  Rendered pages/home.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"webdev"}
+  Rendering pages/webdev.html.haml within layouts/application
+  Rendered pages/webdev.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"webdev"}
+  Rendering pages/webdev.html.haml within layouts/application
+  Rendered pages/webdev.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"photo"}
+  Rendering pages/photo.html.haml within layouts/application
+  Rendered pages/photo.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"photo"}
+  Rendering pages/photo.html.haml within layouts/application
+  Rendered pages/photo.html.haml within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"contact"}
+  Rendering pages/contact.html.haml within layouts/application
+  Rendered pages/contact.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"contact"}
+  Rendering pages/contact.html.haml within layouts/application
+  Rendered pages/contact.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (242.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tyler_guillen_website_test"[0m
+  [1m[35m (590.2ms)[0m  [1m[35mCREATE DATABASE "tyler_guillen_website_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (45.8ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "posts" ("id" serial primary key, "title" character varying, "blurb" text, "content" text, "category_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_category_id" ON "posts" USING btree ("category_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20170301140726')[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES
+('20170301140048');
+
+[0m
+  [1m[35m (43.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", 2017-03-01 14:09:26 UTC], ["updated_at", 2017-03-01 14:09:26 UTC]]
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (186.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tyler_guillen_website_test"[0m
+  [1m[35m (597.6ms)[0m  [1m[35mCREATE DATABASE "tyler_guillen_website_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "categories" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "posts" ("id" serial primary key, "title" character varying, "blurb" text, "content" text, "category_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "date_published" timestamp)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_category_id" ON "posts" USING btree ("category_id")[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20170301142822')[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES
+('20170301140048'),
+('20170301140726');
+
+[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", 2017-03-01 14:54:48 UTC], ["updated_at", 2017-03-01 14:54:48 UTC]]
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "aut"], ["created_at", 2017-03-01 14:55:49 UTC], ["updated_at", 2017-03-01 14:55:49 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "reiciendis sequi"], ["content", "Sit maiores autem ratione dicta. Repellat sequi dolores non ipsum quam deleniti sint. Amet earum quibusdam rem non minima. Rerum est aut.\\n\\nConsequuntur harum est error. Expedita nihil cum in dolorem non eveniet enim. Fuga reiciendis veritatis ab unde nobis corrupti nisi. Et est sint iure illo. Placeat sapiente et."], ["category_id", 1], ["created_at", 2017-03-01 14:55:49 UTC], ["updated_at", 2017-03-01 14:55:49 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "expedita"], ["created_at", 2017-03-01 14:56:14 UTC], ["updated_at", 2017-03-01 14:56:14 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "saepe molestias unde dolorem consequatur"], ["content", "Ut voluptas veniam possimus sunt molestias. Aut qui incidunt placeat cupiditate aut. Aliquam eum voluptatem quibusdam. Nulla doloribus itaque labore sit adipisci et autem. Earum in est temporibus expedita."], ["category_id", 2], ["created_at", 2017-03-01 14:56:14 UTC], ["updated_at", 2017-03-01 14:56:14 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "corrupti"], ["created_at", 2017-03-01 14:56:45 UTC], ["updated_at", 2017-03-01 14:56:45 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "vero in optio minima"], ["content", "Consectetur inventore laboriosam voluptatibus officiis a ad dolor. Ipsa illum repellat doloremque asperiores est laboriosam. Cupiditate ut amet nemo iure. Quia libero voluptas nobis enim dolorem. Alias laborum architecto eaque.\\n\\nRatione adipisci nisi blanditiis eos ut. Sequi quia dolore itaque quis. Tenetur ut odit cumque quae fugit.\\n\\nVoluptates repellendus soluta illum omnis eius tenetur aut. Id et sit corporis. Voluptate excepturi voluptatum."], ["category_id", 3], ["created_at", 2017-03-01 14:56:45 UTC], ["updated_at", 2017-03-01 14:56:45 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (12.1ms)[0m  [1m[33mUPDATE "posts" SET "updated_at" = $1, "date_published" = $2 WHERE "posts"."id" = $3[0m  [["updated_at", 2017-03-01 14:56:45 UTC], ["date_published", 2017-03-01 14:56:45 UTC], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "id"], ["created_at", 2017-03-01 14:59:33 UTC], ["updated_at", 2017-03-01 14:59:33 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "magni aut deserunt ipsum labore"], ["content", "Voluptatem voluptatem velit eos. Ut incidunt hic quo adipisci quia. Explicabo voluptatibus incidunt nihil ratione iste. Officia mollitia debitis sapiente quod.\\n\\nQuia maiores quae. Ipsum sequi adipisci illo at aut esse. Sit non nihil sed.\\n\\nDolores sequi et quia minus officiis deserunt. Hic quasi numquam quia ipsum nihil. Veritatis et quis corrupti. Deserunt consequatur eos et exercitationem quibusdam. Inventore delectus labore rerum temporibus voluptatem repellendus adipisci."], ["category_id", 4], ["created_at", 2017-03-01 14:59:33 UTC], ["updated_at", 2017-03-01 14:59:33 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "posts" SET "updated_at" = $1, "date_published" = $2 WHERE "posts"."id" = $3[0m  [["updated_at", 2017-03-01 14:59:33 UTC], ["date_published", 2017-03-01 14:59:33 UTC], ["id", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "consequuntur"], ["created_at", 2017-03-01 14:59:33 UTC], ["updated_at", 2017-03-01 14:59:33 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ""], ["content", "Deleniti tenetur sit culpa. Necessitatibus ad ipsam aliquid voluptatem. Eos voluptatem ipsum eos corrupti ratione odio minus. Et qui occaecati.\\n\\nRepellat nam sequi. Est sint vel aliquam. Voluptatem officiis velit est. Consequuntur est quis non. Et maiores sed iusto similique consequatur."], ["category_id", 5], ["created_at", 2017-03-01 14:59:33 UTC], ["updated_at", 2017-03-01 14:59:33 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "qui"], ["created_at", 2017-03-01 14:59:33 UTC], ["updated_at", 2017-03-01 14:59:33 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ""], ["content", "Fuga odit modi labore. Et quae illo explicabo quia. Repellat beatae quas ratione.\\n\\nNostrum debitis consequatur neque facilis tempora quo ipsa. Voluptates error voluptas consequatur sapiente eveniet ipsa omnis. Ad quibusdam et. Voluptatem sit ut qui repellendus sed."], ["category_id", 6], ["created_at", 2017-03-01 14:59:33 UTC], ["updated_at", 2017-03-01 14:59:33 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "molestias"], ["created_at", 2017-03-01 14:59:48 UTC], ["updated_at", 2017-03-01 14:59:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "corporis placeat similique"], ["content", "Rerum voluptas dolore placeat saepe nam. Qui quaerat laudantium optio non totam. Voluptatem vero debitis tenetur sit. Nihil aut dolore sapiente qui unde ratione. Unde omnis vero."], ["category_id", 7], ["created_at", 2017-03-01 14:59:48 UTC], ["updated_at", 2017-03-01 14:59:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "posts" SET "updated_at" = $1, "date_published" = $2 WHERE "posts"."id" = $3[0m  [["updated_at", 2017-03-01 14:59:48 UTC], ["date_published", 2017-03-01 14:59:48 UTC], ["id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "facilis"], ["created_at", 2017-03-01 14:59:48 UTC], ["updated_at", 2017-03-01 14:59:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ""], ["content", "Occaecati aut rerum soluta enim doloribus minus. Sit mollitia asperiores. Est ut eligendi repellendus. Est deserunt accusamus dolorem similique.\\n\\nEst tenetur et adipisci autem sit vel. Delectus dolor repellendus similique nostrum. Vero numquam est alias deleniti. Quis sunt laboriosam quis autem ea tempora.\\n\\nRatione expedita magni. Animi ut itaque mollitia. Labore quae et harum ea non rerum. Magni quidem eum impedit."], ["category_id", 8], ["created_at", 2017-03-01 14:59:48 UTC], ["updated_at", 2017-03-01 14:59:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "rerum"], ["created_at", 2017-03-01 14:59:48 UTC], ["updated_at", 2017-03-01 14:59:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ""], ["content", "Rerum blanditiis vitae. Nemo est harum aliquam. Consectetur reprehenderit facilis odit. Id blanditiis quia dignissimos. Iure ut nulla non.\\n\\nError dolor dolores. Dolores non voluptas. Non doloribus est iure perspiciatis dignissimos.\\n\\nMolestias similique quo officia qui quis in. Labore id quos qui sunt libero corrupti nihil. Quis modi amet aut qui labore cupiditate delectus. Voluptate similique consectetur corporis non.\\n\\nQuia vel natus. Ipsam vero enim ut. Fuga voluptatum recusandae."], ["category_id", 9], ["created_at", 2017-03-01 14:59:48 UTC], ["updated_at", 2017-03-01 14:59:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "ad"], ["created_at", 2017-03-01 14:59:58 UTC], ["updated_at", 2017-03-01 14:59:58 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "labore ea ut in tenetur"], ["content", "Quis repellendus illo facere dolor facilis libero. Qui dolore cumque aut beatae perferendis ut. Praesentium quisquam ut."], ["category_id", 10], ["created_at", 2017-03-01 14:59:58 UTC], ["updated_at", 2017-03-01 14:59:58 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "posts" SET "updated_at" = $1, "date_published" = $2 WHERE "posts"."id" = $3[0m  [["updated_at", 2017-03-01 14:59:58 UTC], ["date_published", 2017-03-01 14:59:58 UTC], ["id", 10]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "adipisci"], ["created_at", 2017-03-01 14:59:58 UTC], ["updated_at", 2017-03-01 14:59:58 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ""], ["content", "Ipsam ad corporis. Qui omnis in non laboriosam quia. Fugit tempore modi aut voluptatem. Eius veritatis sit aspernatur atque magnam dolor. Pariatur consequatur optio consectetur eum ex suscipit.\\n\\nNisi unde accusantium. Excepturi illo et. Quia architecto excepturi qui eos et ea. Temporibus asperiores neque voluptas.\\n\\nRem est natus necessitatibus tenetur. Explicabo dolorem dolores. Autem earum aperiam vitae.\\n\\nAutem dolore fugiat explicabo ducimus maxime quae qui. Qui optio enim. Et in laborum deserunt occaecati quo dolores."], ["category_id", 11], ["created_at", 2017-03-01 14:59:58 UTC], ["updated_at", 2017-03-01 14:59:58 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "blanditiis"], ["created_at", 2017-03-01 14:59:58 UTC], ["updated_at", 2017-03-01 14:59:58 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ""], ["content", "Dolores quo exercitationem ut corporis. Dolores cupiditate non consectetur quos quod eaque sapiente. Enim numquam architecto et necessitatibus assumenda esse. Officiis pariatur aliquid non neque sed voluptas dicta."], ["category_id", 12], ["created_at", 2017-03-01 14:59:58 UTC], ["updated_at", 2017-03-01 14:59:58 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "quisquam"], ["created_at", 2017-03-01 15:12:15 UTC], ["updated_at", 2017-03-01 15:12:15 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "magni in quibusdam"], ["content", "Harum dolorem eligendi minus. Sit eligendi officiis. A eligendi incidunt cumque occaecati non. Eum aperiam quaerat enim.\\n\\nOdit aperiam vero quae natus nulla. Ullam eos et adipisci occaecati numquam. Qui dolor laborum explicabo."], ["category_id", 13], ["created_at", 2017-03-01 15:12:15 UTC], ["updated_at", 2017-03-01 15:12:15 UTC], ["date_published", 2017-03-01 15:12:14 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "laborum autem eum"], ["content", "Rerum qui sint enim id minus placeat. Iusto laborum neque recusandae rerum cumque excepturi ut. Aliquam sunt aliquid minus quas nam modi sit.\\n\\nCorrupti quasi quia sapiente sit. Iure quia corporis hic temporibus quasi. Natus minima repellat maiores eveniet est. Ut aliquam tempora.\\n\\nDignissimos omnis occaecati esse dolor excepturi nisi. Aut sint enim magnam at. Repudiandae alias vel numquam. Cumque ea vel vel modi.\\n\\nIste et at. Qui reprehenderit quo error repellat. Culpa officia dolorem aperiam autem. Qui ea voluptas accusamus cumque vitae molestiae quia. Praesentium voluptatem est sit."], ["category_id", 13], ["created_at", 2017-03-01 15:12:15 UTC], ["updated_at", 2017-03-01 15:12:15 UTC], ["date_published", 2017-03-01 15:12:14 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "harum"], ["content", "Quia inventore enim qui accusamus facilis. Enim dolorum ut nisi aspernatur. Placeat inventore excepturi voluptatem suscipit illo. Omnis impedit aut. Est expedita odit qui."], ["category_id", 13], ["created_at", 2017-03-01 15:12:15 UTC], ["updated_at", 2017-03-01 15:12:15 UTC], ["date_published", 2017-03-01 15:12:14 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "qui nihil reprehenderit cumque eum"], ["content", "Illo cupiditate aliquid voluptas omnis dolores. Iure autem voluptates quia tempore eum nostrum. Eaque quia rem. Maiores accusantium voluptate omnis autem commodi animi vel. Perferendis quidem qui tempora.\\n\\nReprehenderit et rerum possimus tenetur praesentium. Voluptate consequatur doloremque eaque maxime sit autem. Est molestiae ducimus consectetur mollitia repudiandae. Dicta assumenda cum nihil ex. Laudantium magnam asperiores vero dicta non.\\n\\nQuibusdam sapiente expedita modi totam autem. Et quis ipsum est tempora. Sequi et voluptas praesentium rem. Laboriosam harum dolore assumenda. Quia corrupti perspiciatis voluptas eum neque.\\n\\nSapiente recusandae non consequatur necessitatibus inventore. Soluta veniam tempora cupiditate. Quisquam corrupti autem iusto itaque consectetur beatae est. Soluta saepe sed rem."], ["category_id", 13], ["created_at", 2017-03-01 15:12:15 UTC], ["updated_at", 2017-03-01 15:12:15 UTC], ["date_published", 2017-03-01 15:12:14 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "libero ut error"], ["content", "Unde deleniti ut illum earum. Eos sit suscipit aut aut ad voluptas. Minima eum est est doloribus. Magni maxime aut consequatur aliquam repudiandae molestias dolores. Quo quia tenetur nisi id.\\n\\nQuae eius tempora id maiores. Est et est consequatur odio fugiat molestias. Ratione id quam. Quia blanditiis eius repudiandae expedita. Qui eveniet nostrum dolores occaecati excepturi.\\n\\nHic omnis et eaque eum nam atque officia. In id commodi. Harum ut delectus alias asperiores fuga. Atque eaque perferendis est explicabo. Quod accusantium porro.\\n\\nDelectus sed in maxime omnis. Ut eos quasi voluptas voluptatem. Ab nisi omnis voluptate sint. Autem sed illo saepe repudiandae esse."], ["category_id", 13], ["created_at", 2017-03-01 15:12:15 UTC], ["updated_at", 2017-03-01 15:12:15 UTC], ["date_published", 2017-03-01 15:12:14 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "atque"], ["content", "Unde aperiam ut ut nemo odit qui. Voluptatem accusamus illo. Aut quia fugit velit veniam cupiditate perspiciatis. Fugit vel saepe ut ullam itaque. Quia praesentium corrupti."], ["category_id", 13], ["created_at", 2017-03-01 15:12:15 UTC], ["updated_at", 2017-03-01 15:12:15 UTC], ["date_published", 2017-03-01 15:12:14 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "cumque asperiores ea voluptatum eius"], ["content", "Culpa in ipsa quia vitae non sit. Libero laboriosam sed. Aut est omnis aut. Facilis facere itaque ex autem.\\n\\nIllum ullam voluptates at perferendis necessitatibus voluptatem. Officiis perspiciatis qui doloribus et omnis molestiae sint. Blanditiis dolor dicta minus similique minima nulla.\\n\\nAliquid error quo minima aperiam in tempora. Voluptas sed laboriosam quis asperiores voluptatem consectetur facilis. Facilis fugit consequatur."], ["category_id", 13], ["created_at", 2017-03-01 15:12:15 UTC], ["updated_at", 2017-03-01 15:12:15 UTC], ["date_published", 2017-03-01 15:12:14 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" WHERE ("posts"."date_published" IS NOT NULL) LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "soluta"], ["created_at", 2017-03-01 15:17:17 UTC], ["updated_at", 2017-03-01 15:17:17 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "voluptatem provident qui"], ["content", "Illum sit nihil maxime sunt. Occaecati quisquam minima rerum cum vero impedit. Et aut qui ratione perspiciatis nemo.\\n\\nExpedita autem fugiat quaerat. Consequatur voluptatem natus est ut vel quae aut. Voluptatem non odio voluptates autem omnis."], ["category_id", 14], ["created_at", 2017-03-01 15:17:17 UTC], ["updated_at", 2017-03-01 15:17:17 UTC], ["date_published", 2017-02-26 15:17:17 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "repellat numquam"], ["content", "Nihil sapiente cupiditate ea aut maiores exercitationem doloribus. Tempora eos saepe voluptatem facilis vitae est. Natus non aut sit molestiae assumenda provident cumque."], ["category_id", 14], ["created_at", 2017-03-01 15:17:17 UTC], ["updated_at", 2017-03-01 15:17:17 UTC], ["date_published", 2017-02-28 15:17:17 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "et laborum qui"], ["content", "Distinctio voluptatem consequatur aut autem provident. Alias vel expedita placeat est qui id impedit. Ratione laudantium rerum similique.\\n\\nAsperiores laborum fugit. Est expedita aperiam magni voluptate iste. Qui officia tempore veniam corrupti aliquid autem. Assumenda corrupti vel alias modi voluptates. Doloremque quia et ipsa autem aut sit."], ["category_id", 14], ["created_at", 2017-03-01 15:17:17 UTC], ["updated_at", 2017-03-01 15:17:17 UTC], ["date_published", 2017-02-27 15:17:17 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE ("posts"."date_published" IS NOT NULL) ORDER BY "posts"."date_published" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (40.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (41.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "quis"], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "a nesciunt"], ["content", "Asperiores aut aut autem omnis nisi fugit voluptas. Odit aut ut saepe rerum. Consectetur alias placeat ad. Sapiente quibusdam quidem nobis rerum quia culpa rerum.\\n\\nEum veniam assumenda iure doloremque. Deserunt placeat qui sint nisi ducimus fugit quas. Ex ut architecto ut officia."], ["category_id", 15], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC], ["date_published", 2017-03-01 19:19:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "eveniet soluta sit"], ["content", "Odio unde quia quasi nesciunt et assumenda temporibus. Quae animi magni totam cupiditate. Ut fugiat nobis quibusdam.\\n\\nSit quibusdam quisquam id voluptatem. Voluptas quod optio consequatur. Nesciunt nostrum cupiditate magnam. Aspernatur odio aut assumenda id beatae officia.\\n\\nEarum at quibusdam veniam hic aperiam eos. Temporibus optio rerum. Id ad fuga facere ut inventore aliquid. Quas et ipsum atque doloribus. Voluptas non et iure.\\n\\nExplicabo quasi cupiditate non aut et. Consequatur beatae non repellat voluptatibus est libero nisi. In facere sit."], ["category_id", 15], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC], ["date_published", 2017-03-01 19:19:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "necessitatibus"], ["content", "Qui quia voluptatem temporibus sed quis dolores et. Quo explicabo et molestias repellat praesentium non sint. Ut facilis sunt assumenda repellat autem laudantium pariatur. Ab nam eos facere molestias eum odit commodi. Ut sit voluptatibus in recusandae.\\n\\nQuia facere nobis odit adipisci. Ab eligendi hic aperiam eaque non. Qui animi fugiat id est dolore numquam. Officiis esse tempore deserunt. Repellendus similique ratione et quidem qui.\\n\\nFacilis iusto est blanditiis tempore voluptatibus quasi. Eligendi harum ab consequatur repudiandae suscipit voluptates velit. Quia voluptas ut et illo."], ["category_id", 15], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC], ["date_published", 2017-03-01 19:19:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "assumenda aut sit et aut"], ["content", "Officiis earum molestiae aut et velit accusantium. Facilis velit repellat impedit officia eveniet iusto. Aliquid provident consequuntur blanditiis eius ad. Enim sapiente sequi quas deleniti.\\n\\nEt est voluptatem sequi et unde voluptates. Cupiditate at ea ut aspernatur qui earum ipsam. Explicabo corrupti architecto qui."], ["category_id", 15], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC], ["date_published", 2017-03-01 19:19:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "at quam omnis perspiciatis qui"], ["content", "Totam iusto sed. Est et non. Veritatis est excepturi asperiores et sit. Reprehenderit eum assumenda accusamus nostrum. Occaecati quis qui et.\\n\\nAlias voluptatem perferendis nostrum unde quaerat deleniti in. Fugit asperiores optio inventore aut odit maxime et. Ut molestiae impedit accusamus non. Qui et suscipit qui quasi aut a dolorum.\\n\\nVoluptatibus dolores doloribus quis voluptatem consequatur est. Necessitatibus aut cupiditate a voluptatem. Qui placeat consequatur vero. Incidunt ut vitae et."], ["category_id", 15], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC], ["date_published", 2017-03-01 19:19:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "quaerat debitis"], ["content", "Neque ab dolor ut sapiente molestias voluptatem. Et aut omnis velit culpa libero omnis. Reiciendis voluptatem corporis nihil ut. Consequatur earum ea laboriosam ut."], ["category_id", 15], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC], ["date_published", 2017-03-01 19:19:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "vel et sapiente error consequuntur"], ["content", "Quaerat nemo magni cupiditate illum doloremque. Sed occaecati rem. Dignissimos consequatur in quae molestias alias est.\\n\\nLaborum unde accusantium sequi cum quas molestiae. Qui soluta aut hic ex. Nihil at a perspiciatis sunt. Consequuntur in soluta asperiores."], ["category_id", 15], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC], ["date_published", 2017-03-01 19:19:48 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" WHERE ("posts"."date_published" IS NOT NULL) LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "vel"], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "quam eaque"], ["content", "Qui ut quibusdam ut et in dicta itaque. Non laudantium autem vero eveniet quia. Odio voluptatem vero itaque eum id praesentium. Libero et quaerat nihil saepe et sunt. Amet iusto vero et non.\\n\\nIpsum et earum ut voluptates. Quos non ut sit beatae. Maxime qui voluptatem reiciendis consequatur et voluptatem ipsum.\\n\\nEaque a sint mollitia. Necessitatibus architecto eum possimus officia quod ea asperiores. Quaerat quo dolor eum beatae velit perferendis blanditiis.\\n\\nNecessitatibus soluta sit veritatis quisquam vel ea dolore. Minima suscipit cupiditate voluptatum necessitatibus. Quo quos itaque sit voluptatibus vero odio. Ab rerum soluta et illo."], ["category_id", 16], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC], ["date_published", 2017-02-26 19:19:49 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "ut"], ["content", "Quidem necessitatibus expedita doloremque. Iusto suscipit voluptatem quia asperiores. Sint est illum velit commodi.\\n\\nMaiores debitis odit provident voluptatem perspiciatis nulla. Corrupti perferendis error. In itaque eius qui cupiditate. Fugiat suscipit atque accusamus. Unde cupiditate qui eveniet id tenetur neque.\\n\\nSunt doloremque et ipsum aut aut consectetur. Dolore eum reiciendis ut unde perspiciatis molestias. Quis maxime natus voluptas."], ["category_id", 16], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC], ["date_published", 2017-02-28 19:19:49 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "quam excepturi"], ["content", "Eaque ipsam ipsum. Temporibus delectus nobis ab et est. Debitis praesentium adipisci enim iure repellat odit."], ["category_id", 16], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC], ["date_published", 2017-02-27 19:19:49 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE ("posts"."date_published" IS NOT NULL) ORDER BY "posts"."date_published" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "est"], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "quidem beatae alias"], ["content", "Iste quasi ea et voluptas mollitia dolore. Asperiores voluptas eum atque. Distinctio dolores iusto autem. Alias provident unde qui ea rem. Optio velit fugit expedita accusamus id.\\n\\nQui voluptas quod tenetur voluptatibus animi. Perspiciatis eaque quaerat. Eum officia sed.\\n\\nMagni illum quod doloribus eum delectus accusantium. Quasi voluptatem dignissimos molestias ut. Totam sed molestiae natus. Quia in officiis nisi."], ["category_id", 17], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "posts" SET "blurb" = $1, "updated_at" = $2, "date_published" = $3 WHERE "posts"."id" = $4[0m  [["blurb", "                  "], ["updated_at", 2017-03-01 19:19:49 UTC], ["date_published", 2017-03-01 19:19:49 UTC], ["id", 33]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "reprehenderit"], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "corporis"], ["content", "Aut distinctio voluptatem dolor quo. Exercitationem non vitae consequatur quas ea sed adipisci. In atque ipsam adipisci autem explicabo quae. Qui molestias voluptas adipisci consequatur. Error ut placeat officiis saepe quis."], ["category_id", 18], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "posts" SET "blurb" = $1, "updated_at" = $2, "date_published" = $3 WHERE "posts"."id" = $4[0m  [["blurb", "                "], ["updated_at", 2017-03-01 19:19:49 UTC], ["date_published", 2017-03-01 19:19:49 UTC], ["id", 34]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "natus"], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ""], ["content", "Cum doloribus quam ex et magni culpa qui. Vitae odit aut porro consequatur adipisci incidunt. Placeat consectetur aliquid in nesciunt quas.\\n\\nTotam minima repellat quasi. Qui aliquam id. Quaerat incidunt aperiam est dicta. Voluptatum dolor ex perferendis facilis quasi. Aut quo architecto eos.\\n\\nPlaceat atque unde. Aut rem ipsum explicabo sapiente ut et. Ipsa dolor non et quos.\\n\\nQui in fuga voluptas. In ab laboriosam consequatur rerum. Tenetur itaque recusandae cupiditate ut. Consequuntur molestiae et ad sed qui et. Iusto fuga unde provident."], ["category_id", 19], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "asperiores"], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ""], ["content", "Molestiae corporis in. Asperiores explicabo dolores. Cum et recusandae et eos incidunt facilis cumque.\\n\\nIste expedita libero aut eos. Doloremque natus incidunt ut eum voluptatibus libero. Enim quia corporis magni corrupti.\\n\\nCulpa hic blanditiis. Velit est reprehenderit quas. Sunt veniam cupiditate sit facere id. Ut quae repellat aut quisquam ex maxime nam. Aut enim minus."], ["category_id", 20], ["created_at", 2017-03-01 19:19:49 UTC], ["updated_at", 2017-03-01 19:19:49 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "ea"], ["created_at", 2017-03-01 19:20:11 UTC], ["updated_at", 2017-03-01 19:20:11 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "repellat"], ["content", "Aut quam beatae sequi ex ipsam. Excepturi et et qui rem. Quibusdam totam numquam."], ["category_id", 21], ["created_at", 2017-03-01 19:20:11 UTC], ["updated_at", 2017-03-01 19:20:11 UTC], ["date_published", 2017-03-01 19:20:11 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "quia numquam"], ["content", "Hic consequuntur mollitia. Occaecati pariatur sit ducimus ut ab in. Similique sed quisquam eum accusamus expedita ducimus. Ut voluptas sint.\\n\\nQui voluptatibus quos accusantium non repellendus quod. Nostrum iste provident non. Ex laborum ducimus et asperiores dolore quod eaque. Eius optio doloremque dolorum. Laborum suscipit corporis.\\n\\nId mollitia qui cupiditate doloremque quasi. Consequuntur est facere. Repudiandae totam corrupti qui. Omnis ipsa nihil tenetur eos.\\n\\nImpedit velit velit qui autem aliquam beatae. At ab nostrum. In harum ad at."], ["category_id", 21], ["created_at", 2017-03-01 19:20:11 UTC], ["updated_at", 2017-03-01 19:20:11 UTC], ["date_published", 2017-03-01 19:20:11 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "atque"], ["content", "Fugiat expedita suscipit dicta sint voluptatibus. Dolores voluptatem magni sed. Optio qui cumque laboriosam et vel sint commodi. Corrupti praesentium consequatur est et tenetur ut omnis. Esse dignissimos molestiae ea.\\n\\nDolores eius sapiente sunt quo aperiam. Velit tempora neque. Non ipsam ratione est rerum doloribus. Vel soluta tempora.\\n\\nQuidem ex suscipit consequuntur accusamus est. Omnis rerum unde consequatur a laboriosam. Sunt est aut commodi ratione. Et quibusdam qui et soluta veniam."], ["category_id", 21], ["created_at", 2017-03-01 19:20:11 UTC], ["updated_at", 2017-03-01 19:20:11 UTC], ["date_published", 2017-03-01 19:20:11 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "consequuntur"], ["content", "Necessitatibus ipsa et similique vel ducimus delectus excepturi. Itaque maiores voluptatem voluptas. Voluptatibus quasi ducimus voluptatum sed sunt. Dicta aut perspiciatis et omnis qui veritatis. Porro illo maiores voluptatem dolorum libero reiciendis.\\n\\nSunt molestiae explicabo. Temporibus eius nihil odio sint praesentium. Rem qui dolorem architecto autem et. Nesciunt rerum possimus et.\\n\\nQuia et eius laborum. Ullam nam ipsa minus nesciunt aut enim. Temporibus dolorem quia. Dicta assumenda et atque est.\\n\\nIpsam dolorem nemo eos qui minus ut. Aut ut earum. Neque expedita et."], ["category_id", 21], ["created_at", 2017-03-01 19:20:11 UTC], ["updated_at", 2017-03-01 19:20:11 UTC], ["date_published", 2017-03-01 19:20:11 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "voluptatem laudantium"], ["content", "Animi itaque voluptas. Eaque necessitatibus molestiae voluptas enim. Est sit animi quia asperiores rerum. Impedit quia itaque architecto laudantium ea. Aliquid tenetur assumenda non numquam temporibus dicta aut.\\n\\nEt impedit et. Quam et cumque quia quidem. Amet temporibus repellat voluptatibus voluptatem sit commodi. Repellendus quis dolore mollitia.\\n\\nOmnis incidunt necessitatibus consequuntur temporibus dolore nihil. Tempora ab dolores asperiores soluta qui. Dolorem odio nemo quia sed soluta. Qui aut similique est soluta accusantium sequi. Est maiores assumenda."], ["category_id", 21], ["created_at", 2017-03-01 19:20:11 UTC], ["updated_at", 2017-03-01 19:20:11 UTC], ["date_published", 2017-03-01 19:20:11 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "consectetur molestias quisquam ratione odit"], ["content", "Est unde est illum recusandae est excepturi. Sunt voluptatem laudantium et molestiae voluptas reprehenderit tempore. Et est cumque similique velit.\\n\\nItaque officiis qui dolores. Ratione mollitia facilis inventore nihil at. Dolores et rerum suscipit minima nam sequi.\\n\\nQui ut eligendi fuga. Nemo et necessitatibus vero sit. Ducimus culpa dicta voluptatem sequi et quis minima. Dolor dolores magnam. Est quia corrupti dolorum enim dolor consequatur aperiam."], ["category_id", 21], ["created_at", 2017-03-01 19:20:11 UTC], ["updated_at", 2017-03-01 19:20:11 UTC], ["date_published", 2017-03-01 19:20:11 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "voluptatem"], ["content", "Ut ut blanditiis sapiente temporibus aut assumenda velit. In est vel hic. Laborum modi ipsum.\\n\\nQuam quod itaque aliquid. Officia temporibus magnam ratione perferendis. Recusandae id harum. Et soluta velit blanditiis."], ["category_id", 21], ["created_at", 2017-03-01 19:20:11 UTC], ["updated_at", 2017-03-01 19:20:11 UTC], ["date_published", 2017-03-01 19:20:11 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" WHERE ("posts"."date_published" IS NOT NULL) LIMIT $1) subquery_for_count[0m  [["LIMIT", 5]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "earum"], ["created_at", 2017-03-01 19:20:11 UTC], ["updated_at", 2017-03-01 19:20:11 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "officiis similique corporis quae"], ["content", "Quibusdam ex quaerat dolorem similique enim consequatur earum. Labore minus commodi et. Eos ipsam porro est voluptatum. Voluptatibus repellat error excepturi voluptatem. Aperiam molestiae natus ullam excepturi voluptatem laboriosam vel.\\n\\nTempore molestiae quas. In odit quia et nostrum. Et fugit reprehenderit sed dicta perspiciatis reiciendis."], ["category_id", 22], ["created_at", 2017-03-01 19:20:11 UTC], ["updated_at", 2017-03-01 19:20:11 UTC], ["date_published", 2017-02-26 19:20:11 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "occaecati velit dolores minima"], ["content", "Fuga sed ut impedit et facere a. Alias non placeat ut quia. Voluptatem nulla cupiditate. Quisquam asperiores recusandae culpa pariatur non.\\n\\nCupiditate laboriosam rem. Aut non numquam. Asperiores ea ut.\\n\\nIncidunt ut minus sit voluptate omnis quidem. Enim dolore facere. Non maxime et aut aliquam aut ducimus cupiditate. Quia iste sunt reprehenderit dolore."], ["category_id", 22], ["created_at", 2017-03-01 19:20:11 UTC], ["updated_at", 2017-03-01 19:20:11 UTC], ["date_published", 2017-02-28 19:20:11 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at", "date_published") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "molestiae"], ["content", "Sint et veniam sunt eos culpa. Aspernatur voluptas quibusdam. Nisi exercitationem illum animi aut. Voluptas maiores itaque sunt.\\n\\nNulla quia dolores et asperiores. Voluptate illum sequi. A eos suscipit sunt perspiciatis expedita.\\n\\nSed perspiciatis ullam aut sit eum alias enim. Vitae quia ut non et ut eum quo. Quo et repudiandae explicabo fuga. Nobis recusandae laborum. Nam error accusantium autem pariatur."], ["category_id", 22], ["created_at", 2017-03-01 19:20:11 UTC], ["updated_at", 2017-03-01 19:20:11 UTC], ["date_published", 2017-02-27 19:20:11 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE ("posts"."date_published" IS NOT NULL) ORDER BY "posts"."date_published" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "adipisci"], ["created_at", 2017-03-01 19:20:11 UTC], ["updated_at", 2017-03-01 19:20:11 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "et dolor aut esse odio"], ["content", "Non ipsum molestias numquam commodi facilis debitis. Ex voluptas voluptatem quia voluptates ut. Dolores eius rem reiciendis est placeat. Et odio vel cumque laborum cum dolorum. Est fuga odit sit adipisci amet nulla autem."], ["category_id", 23], ["created_at", 2017-03-01 19:20:11 UTC], ["updated_at", 2017-03-01 19:20:11 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "posts" SET "blurb" = $1, "updated_at" = $2, "date_published" = $3 WHERE "posts"."id" = $4[0m  [["blurb", "Non ipsum molestias numquam commodi facilis debitis. Ex voluptas voluptatem quia voluptates ut. Dolores eius"], ["updated_at", 2017-03-01 19:20:11 UTC], ["date_published", 2017-03-01 19:20:11 UTC], ["id", 47]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "quisquam"], ["created_at", 2017-03-01 19:20:11 UTC], ["updated_at", 2017-03-01 19:20:11 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "qui explicabo"], ["content", "Aut accusantium harum modi qui voluptatem. Corrupti eaque nulla. Possimus aperiam blanditiis. Facere minus ut. Incidunt velit et expedita iure fugit."], ["category_id", 24], ["created_at", 2017-03-01 19:20:11 UTC], ["updated_at", 2017-03-01 19:20:11 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "posts" SET "blurb" = $1, "updated_at" = $2, "date_published" = $3 WHERE "posts"."id" = $4[0m  [["blurb", "Aut accusantium harum modi qui voluptatem. Corrupti eaque nulla. Possimus aperiam blanditiis. Facere minus ut."], ["updated_at", 2017-03-01 19:20:12 UTC], ["date_published", 2017-03-01 19:20:12 UTC], ["id", 48]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "omnis"], ["created_at", 2017-03-01 19:20:12 UTC], ["updated_at", 2017-03-01 19:20:12 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ""], ["content", "Vel in at illum qui. Sit omnis fugit. Facilis aut odit.\\n\\nQuis et iusto nisi ipsam numquam hic. Aut eos atque ut dolorem molestias qui et. Non omnis voluptatem. Sed non itaque voluptatem et molestias accusamus non. Corporis dignissimos et aperiam.\\n\\nRecusandae veritatis quia ea consequatur. Sit est vel aut fuga veniam sit. Nesciunt dicta quae corrupti. Maiores quia qui ea impedit totam.\\n\\nAmet quam eligendi consectetur. Maxime quia voluptatem dignissimos consequatur dicta sint et. Quasi illum quae dolor ex."], ["category_id", 25], ["created_at", 2017-03-01 19:20:12 UTC], ["updated_at", 2017-03-01 19:20:12 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "quia"], ["created_at", 2017-03-01 19:20:12 UTC], ["updated_at", 2017-03-01 19:20:12 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", ""], ["content", "Est sint aliquid necessitatibus nihil quasi voluptatem. Aspernatur et neque nobis. Pariatur molestias id sit nostrum autem porro. Et ut aut non velit exercitationem alias.\\n\\nDolores deserunt numquam neque repellat. Molestias in ipsum eos. Rerum quas dolorem et debitis. Minus corporis consequatur qui numquam. Non repudiandae nisi consequatur dolore aliquam.\\n\\nAsperiores adipisci ratione officia est et. Nobis perspiciatis esse in. Dolores molestiae sed numquam ea reiciendis aut. Sed quia sint est quis voluptatem aut."], ["category_id", 26], ["created_at", 2017-03-01 19:20:12 UTC], ["updated_at", 2017-03-01 19:20:12 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
