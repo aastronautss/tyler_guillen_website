@@ -118,3 +118,92 @@ nav {
     }
   }
 }
+
+// Desktops and Laptops
+@media only screen and (max-width : 1824px) {}
+
+// iPads (landscape)
+@media only screen and (max-width : 1224px) {}
+
+// iPads (portrait)
+@media only screen and (max-width : 1024px) {
+  h1 {
+    display: block;
+    font-size: 3.5em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  nav {
+    display: block;
+    margin-top: 25px;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 5px;
+
+      font-size: 1.1em;
+
+      a {
+        display: block;
+        padding: 10px 10px;
+        width: 150px;
+        border-radius: 3px;
+
+        background: $button-bg-color;
+      }
+
+      &.active a {
+        background: $active-button-bg-color;
+      }
+    }
+  }
+
+  .lower-content {
+    margin-top: 35px;
+  }
+
+  .blog-summaries {
+    margin-top: 20px;
+  }
+
+  .contact-links {
+    margin-top: 35px;
+
+    h3 {
+      pointer-events: none;
+      z-index: 2;
+      padding-bottom: 15px;
+
+      font-family: $subheader-font-stack;
+      font-size: 1.1em;
+      color: $link-color;
+    }
+
+    p {
+      padding-top: 5px;
+    }
+
+    a {
+      display: block;
+      z-index: 1;
+      margin: -54px 0 0 115px;
+      padding: 10px 10px;
+      width: 150px;
+      border-radius: 3px;
+
+      text-indent: -1000em;
+      background: $button-bg-color;
+    }
+  }
+}
