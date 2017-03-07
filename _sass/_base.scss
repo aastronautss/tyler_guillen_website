@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Mate:400,400i|Open+Sans:300,300i,400,400i,600,600i,700,700i');
-
 main {
   &.front {
     position: absolute;
@@ -47,6 +45,8 @@ main {
     }
 
     h1 {
+      position: relative;
+      top: -18px;
       display: inline-block;
       margin: 0;
 
@@ -100,18 +100,6 @@ main {
       margin: 0 auto;
       padding-bottom: 45px;
       width: 400px;
-
-      // Page Load
-      opacity: 0;
-      -webkit-transition: opacity 0.7s ease-in;
-         -moz-transition: opacity 0.7s ease-in;
-          -ms-transition: opacity 0.7s ease-in;
-           -o-transition: opacity 0.7s ease-in;
-              transition: opacity 0.7s ease-in;
-
-      &.load {
-        opacity: 1;
-      }
 
       .photo-set-tile-group {
         width: 100%;
@@ -197,14 +185,42 @@ main {
   }
 }
 
-.fade-on-leave {
-  -webkit-transition: opacity 0.4s ease-in;
-     -moz-transition: opacity 0.4s ease-in;
-      -ms-transition: opacity 0.4s ease-in;
-       -o-transition: opacity 0.4s ease-in;
-          transition: opacity 0.4s ease-in;
+.centered-vert {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  &.centered-optically {
+    top: 45%;
+  }
 }
 
-.fade-out {
-  opacity: 0;
+.centered-horiz {
+  text-align: center;
+}
+
+@media (max-width: 990px) {
+  main.front {
+    h1 {
+      display: block;
+      text-align: center;
+    }
+
+    nav {
+      margin: 10px 0 0 0;
+      width: 100%;
+      text-align: center;
+
+      li {
+        display: inline-block;
+      }
+    }
+
+
+    .lower-content {
+      width: 800px;
+    }
+  }
 }

@@ -1,0 +1,25 @@
+body {
+  font-family: $text-font-stack;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.3em;
+  color: $text-color
+}
+
+h1 {
+  font-family: $header-font-stack;
+  font-size: 2.5em;
+  color: $header-1-color;
+}
+
+h2 {
+  font-family: $header-font-stack;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: $header-2-color;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}

@@ -7,11 +7,13 @@
   </head>
 
   <body>
-    <main class="front fade-on-leave">
-      {% include header.html %}
-      <div class="lower-content">
-        {{ content }}
-      </div>
-    </main>
+    <div id="wrap">
+      <main class="fade-on-leave">
+        {% include header.html %}
+        <div class="lower-content fade-on-load">
+          {{ content }}
+        </div>
+      </main>
+    </div>
   </body>
 </html>

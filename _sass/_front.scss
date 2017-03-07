@@ -1,0 +1,47 @@
+#wrap {
+  position: relative;
+  height: 100vh;
+}
+
+main {
+  position: absolute;
+  top: 45%;
+  margin: -39px auto 0 auto;
+  width: 100%;
+}
+
+header {
+  height: 78px;
+  text-align: center;
+}
+
+h1 {
+  display: inline-block;
+  position: relative;
+  top: -18px;
+  text-align: right;
+}
+
+h2 {
+  margin: 0;
+  text-align: center;
+}
+
+nav {
+  display: inline-block;
+  margin-left: 25px;
+  width: 148px;
+
+  font-family: $subheader-font-stack;
+  text-align: left;
+
+  .active {
+    font-weight: 600;
+  }
+}
+
+.lower-content {
+  margin: 25px auto 0 auto;
+  padding: 0 0 45px 0;
+  width: 400px;
+}
