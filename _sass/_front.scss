@@ -41,7 +41,49 @@ nav {
 }
 
 .lower-content {
-  margin: 25px auto 0 auto;
+  margin: 39px auto 0 auto;
   padding: 0 0 45px 0;
   width: 400px;
+}
+
+.contact-links {
+  text-align: center;
+
+  h3 {
+    margin: 15px 0 5px 0;
+  }
+
+  p {
+    i {
+      color: $accent-color;
+    }
+  }
+}
+
+.blog-summary {
+  margin-top: 10px;
+
+  h3 {
+    display: inline-block;
+    font-size: 1em;
+  }
+
+  .post-date {
+    display: inline-block;
+    margin-left: 5px;
+    font-style: italic;
+    color: #888;
+  }
+
+  .post-excerpt {
+    display: block;
+  }
+
+  .post-more a {
+    color: #888;
+  }
+
+  & + .blog-summary {
+    margin-top: 20px;
+  }
 }

@@ -19,7 +19,18 @@ h2 {
   color: $header-2-color;
 }
 
+h3 {
+  font-family: $header-font-stack;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: $header-3-color;
+}
+
 a {
   color: $link-color;
   text-decoration: none;
+}
+
+i {
+  font-style: italic;
 }
