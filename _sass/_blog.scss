@@ -14,9 +14,14 @@ main {
 }
 
 article {
-  margin: 0 auto;
+  // margin: 0 auto;
   padding: 10px 0 25px 0;
-  width: 600px;
+  // width: 600px;
+
+  header {
+    margin: 0 auto;
+    width: 600px;
+  }
 
   h1 {
     margin-bottom: 5px;
@@ -46,6 +51,10 @@ article {
     }
 
     h1 {
+      margin-left: auto;
+      margin-right: auto;
+      width: 600px;
+
       margin-top: 15px;
       margin-bottom: 0;
       font-family: Futura, "Open Sans", "Trebushet MS", Arial, sans-serif;
@@ -58,6 +67,10 @@ article {
     }
 
     h2 {
+      margin-left: auto;
+      margin-right: auto;
+      width: 600px;
+
       margin-top: 15px;
       font-family: Futura, "Open Sans", "Trebushet MS", Arial, sans-serif;
       font-size: 1.3em;
@@ -70,6 +83,10 @@ article {
     }
 
     h3 {
+      margin-left: auto;
+      margin-right: auto;
+      width: 600px;
+
       font-family: "Open Sans", sans-serif;
       font-size: 1.2em;
       font-weight: 300;
@@ -82,15 +99,55 @@ article {
     }
 
     p {
+      margin-left: auto;
+      margin-right: auto;
+      width: 600px;
       text-align: justify;
+    }
+
+    ul {
+      box-sizing: border-box;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 0 0 30px;
+      width: 600px;
+      list-style-type: disc;
+      text-align: justify;
+    }
+
+    p a,
+    ul a {
+      text-decoration: underline;
     }
   }
 
   .filed-in {
     // position: relative;
     // width: 100%;
+    margin: 0 auto;
+    width: 600px;
     text-align: right;
   }
+}
+
+figure {
+  text-align: center;
+
+  img {
+    max-width: 650px;
+    overflow: visible;
+  }
+}
+
+figcaption {
+  display: block;
+  padding: 0 75px;
+  margin: 0 auto;
+  width: 600px;
+  font-family: $subheader-font-stack;
+  font-style: italic;
+  font-size: 0.9em;
+  color: $accent-color;
 }
 
 .back-to-main {
