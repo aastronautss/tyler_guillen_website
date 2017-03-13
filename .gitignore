@@ -23,4 +23,5 @@
 # Ignore application configuration
 /config/application.yml
 
-/_site
+_site/
+.sass-cache/

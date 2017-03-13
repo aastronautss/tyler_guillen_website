@@ -14,21 +14,23 @@ nav_sort: 3
         </a>
       </h3>
 
-      &#9702;
-
       <span class="post-date">
-        {{ post.date | date_to_long_string }}
+        <time datetime="{{ post.date }}">
+          {{ post.date | date_to_long_string }}
+        </time>
       </span>
 
-      <span class="post-excerpt">
-        {{ post.excerpt | remove: "<p>" | remove: "</p>"}}
+      <div class="post-excerpt">
+        <p>
+          {{ post.excerpt | remove: "<p>" | remove: "</p>" }}
+        </p>
 
-        <span class="post-more">
+        <div class="post-more">
           <a class="leave-layout" href="{{ post.url }}">
             Read more...
           </a>
-        </span>
-      </span>
+        </div>
+      </div>
     </div>
   {% endfor %}
 </div>
