@@ -242,3 +242,18 @@ nav {
     }
   }
 }
+
+// Smartphones (landscape)
+@media only screen and (max-width : 768px) {}
+
+// Large Smartphones (portrait)
+@media only screen and (max-width : 425px) {
+  h1 {
+    font-size: 100px;
+  }
+}
+
+// Smartphones (portrait)
+@media only screen and (max-width : 321px) {
+
+}
