@@ -1,6 +1,4 @@
 permalink: pretty
-gems:
-  - jekyll-paginate
 
 defaults:
   -
@@ -19,3 +17,5 @@ defaults:
       layout: main
       assets: main
 
+gems:
+  - octopress-paginate

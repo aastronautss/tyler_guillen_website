@@ -46,6 +46,23 @@ nav {
   width: 400px;
 }
 
+footer {
+  box-sizing: border-box;
+  margin: 15px 0 0 0;
+  border-top: 1px solid white;
+  padding: 15px 0 0 0;
+
+  &.pagination {
+    .next-page {
+      float: right;
+    }
+
+    .previous-page {
+      float: left;
+    }
+  }
+}
+
 .contact-links {
   text-align: center;
 

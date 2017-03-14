@@ -1,0 +1,15 @@
+---
+title: 2016 Favorites
+category: photography
+summary: This was a great year for photos.
+---
+
+{% include blog_image.html img="31391711456_6a13152069_k.jpg" title="Bejgli" %}
+
+{% include blog_image.html img="31529763210_7f9b8ed5f9_k.jpg" title="Bejgli" %}
+
+{% include blog_image.html img="30040708643_17104dfcb6_k.jpg" title="Bejgli" %}
+
+{% include blog_image.html img="29714248723_3b31d1e872_k.jpg" title="Bejgli" %}
+
+{% include blog_image.html img="26072384055_689e30e557_k.jpg" title="Bejgli" %}

@@ -1,12 +1,16 @@
 ---
 title: Blog
 nav_sort: 3
+paginate:
+  collection: posts
+  per_page: 3
+  permalink: "/p:num/"
 ---
 
-<h2>Recent Posts</h2>
+<h2>Blog</h2>
 
 <div class="blog-summaries">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
     <div class="blog-summary">
       <h3>
         <a href="{{ post.url }}" class="leave-layout">
@@ -22,7 +26,11 @@ nav_sort: 3
 
       <div class="post-excerpt">
         <p>
-          {{ post.excerpt | remove: "<p>" | remove: "</p>" }}
+          {% if post.summary %}
+            {{ post.summary }}
+          {% else %}
+            {{ post.excerpt | remove: "<p>" | remove: "</p>" }}
+          {% endif %}
         </p>
 
         <div class="post-more">
@@ -34,3 +42,17 @@ nav_sort: 3
     </div>
   {% endfor %}
 </div>
+
+<footer class="pagination clearfix">
+  {% if paginator.previous_page %}
+    <div class="previous-page">
+      <a href="{{ paginator.previous_page_path }}">← Newer Posts</a>
+    </div>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <div class="next-page">
+      <a href="{{ paginator.next_page_path }}">Older Posts →</a>
+    </div>
+  {% endif %}
+</footer>

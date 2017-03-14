@@ -1,0 +1,23 @@
+---
+title: The Road
+category: photography
+---
+
+(and a few more photos I never put up here)
+<!-- more -->
+
+{% include blog_image.html img="8940921555_f9ab31cf4f_o.jpg" title="The Road" %}
+
+# Wedding Three
+
+{% include blog_image.html img="8938128657_e89d5028af_k.jpg" title="Wedding Three" %}
+
+{% include blog_image.html img="8938756100_3015ab5fdf_k.jpg" title="Wedding Three" %}
+
+# Road Trip, June 2013
+
+{% include blog_image.html img="9018825159_8af8d8ce77_k.jpg" title="Road Trip June 2013" %}
+
+{% include blog_image.html img="9018824853_9989f3f606_k.jpg" title="Road Trip June 2013" %}
+
+{% include blog_image.html img="9021242315_525acae11b_k.jpg" title="Road Trip June 2013" %}
