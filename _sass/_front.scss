@@ -11,14 +11,14 @@ main {
 }
 
 header {
-  height: 78px;
+  height: 96px;
   text-align: center;
 }
 
 h1 {
   display: inline-block;
   position: relative;
-  top: -18px;
+  top: -26px;
   text-align: right;
 }
 
@@ -102,6 +102,24 @@ footer {
 
   & + .blog-summary {
     margin-top: 20px;
+  }
+}
+
+.reading-list {
+  h3 {
+    margin: 15px 0 10px 0;
+    text-align: center;
+  }
+
+  .reading-sublist {
+    a {
+      font-size: 1.1em;
+      color: $accent-color;
+    }
+
+    .by {
+      font-size: 0.9em;
+    }
   }
 }
 

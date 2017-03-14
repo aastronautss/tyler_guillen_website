@@ -1,0 +1,23 @@
+---
+title: Reading List
+---
+
+{% assign reading_list = site.data.reading_list %}
+
+<article class="reading-list">
+  <h2>Reading List</h2>
+
+  {% for section in reading_list %}
+    <h3>{{ section.header }}</h3>
+
+    <div class="reading-sublist">
+      <ul>
+        {% for book in section.books %}
+          <li>
+            <a href="{{ book.url }}">{{ book.title }}</a> <span class="by">by {{ book.author }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</article>

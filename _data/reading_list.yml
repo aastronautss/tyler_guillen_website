@@ -1,0 +1,18 @@
+-
+  header: Currently Reading
+  books:
+    -
+      title: The Black Swan
+      author: Nassim Nicholas Taleb
+      url: https://smile.amazon.com/Black-Swan-Improbable-Robustness-Fragility/dp/081297381X/ref=sr_1_1?ie=UTF8&qid=1489515672&sr=8-1&keywords=the+black+swan
+    -
+      title: Infinite Jest
+      author: David Foster Wallace
+      url: https://smile.amazon.com/Infinite-Jest-Novel-20th-Anniversary/dp/0316306053/ref=sr_1_1?ie=UTF8&qid=1489515691&sr=8-1&keywords=infinite+jest
+-
+  header: 2017
+  books:
+    -
+      title: The Infinite Book
+      author: John D. Barrow
+      url: https://www.amazon.com/Infinite-Book-Boundless-Timeless-Endless/dp/1400032245
