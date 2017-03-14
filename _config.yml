@@ -1,4 +1,6 @@
 permalink: pretty
+paginate: 3
+paginate_path: /blog/p:num/
 
 defaults:
   -
@@ -18,4 +20,4 @@ defaults:
       assets: main
 
 gems:
-  - octopress-paginate
+  - jekyll-paginate
