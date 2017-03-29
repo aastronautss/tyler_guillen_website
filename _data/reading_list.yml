@@ -2,6 +2,18 @@
   header: Currently Reading
   books:
     -
+      title: Cracking the Coding Interview, 6th edition
+      author: Gayle Laakmann McDowell
+      url: https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwiLoY2Ag_zSAhUlr1QKHYgaCJEQFgghMAE&url=https%3A%2F%2Fwww.amazon.com%2FCracking-Coding-Interview-Programming-Questions%2Fdp%2F0984782850&usg=AFQjCNHdGYztXdYnpZ2EJ42o9R-EWdstQQ&sig2=esmr6VDguT-_u-9y16l8vQ
+    -
+      title: "The Pragmatic Programmer: From Journeyman to Master"
+      author: Andrew Hunt and David Thomas
+      url: https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjVovmSg_zSAhUKqFQKHX19A2sQFggcMAA&url=https%3A%2F%2Fwww.amazon.com%2FPragmatic-Programmer-Journeyman-Master%2Fdp%2F020161622X&usg=AFQjCNEfE8YiT4-ZffkxTmihq8lBHArOQQ&sig2=3yudyGxv8k0ruYKbaVzMgw
+    -
+      title: Practial Object Oriented Design in Ruby
+      author: Sandi Metz
+      url: https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwiazJK4g_zSAhVqr1QKHb8HCRgQFgghMAE&url=https%3A%2F%2Fwww.amazon.com%2FPractical-Object-Oriented-Design-Ruby-Addison-Wesley%2Fdp%2F0321721330&usg=AFQjCNHcWw_aBevKp9jdPndmqQ4ut0TgFw&sig2=3BaucumFLD3gBk3Z7QXjDA
+    -
       title: The Black Swan
       author: Nassim Nicholas Taleb
       url: https://smile.amazon.com/Black-Swan-Improbable-Robustness-Fragility/dp/081297381X/ref=sr_1_1?ie=UTF8&qid=1489515672&sr=8-1&keywords=the+black+swan
