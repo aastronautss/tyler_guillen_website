@@ -44,6 +44,12 @@ nav {
   margin: 39px auto 0 auto;
   padding: 0 0 45px 0;
   width: 400px;
+
+  p {
+    a {
+      text-decoration: underline;
+    }
+  }
 }
 
 footer {
@@ -63,6 +69,24 @@ footer {
   }
 }
 
+.engineering-page {
+  section {
+    margin-top: 18px;
+  }
+
+  h3 {
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 1.35em;
+  }
+
+  p {
+    & + p {
+      margin-top: 15px;
+    }
+  }
+}
+
 .contact-links {
   text-align: center;
 
@@ -73,6 +97,10 @@ footer {
   p {
     i {
       color: $accent-color;
+    }
+
+    a {
+      text-decoration: none;
     }
   }
 }
