@@ -38,3 +38,18 @@ a {
 i {
   font-style: italic;
 }
+
+dt {
+  display: inline;
+  font-family: $header-font-stack;
+  font-size: 1.05em;
+
+  a {
+    color: $accent-color;
+  }
+}
+
+dd {
+  display: inline;
+  font-size: 0.9em;
+}
