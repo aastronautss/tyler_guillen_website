@@ -22,3 +22,15 @@
 .fade-out {
   opacity: 0;
 }
+
+.flash-transition {
+  -webkit-transition: opacity 0.5s ease-in;
+     -moz-transition: opacity 0.5s ease-in;
+      -ms-transition: opacity 0.5s ease-in;
+       -o-transition: opacity 0.5s ease-in;
+          transition: opacity 0.5s ease-in;
+}
+
+.flash {
+  opacity: 0.6;
+}

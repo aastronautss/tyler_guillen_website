@@ -1,3 +1,7 @@
+body {
+  counter-reset: ol;
+}
+
 main {
   padding: 10px;
 
@@ -89,9 +93,10 @@ article {
 
       font-family: "Open Sans", sans-serif;
       font-size: 1.2em;
-      font-weight: 300;
+      font-weight: 400;
       font-style: italic;
       letter-spacing: .05em;
+      color: $header-3-color;
 
       & + p {
         margin-top: 0;
@@ -127,6 +132,52 @@ article {
     margin: 0 auto;
     width: 600px;
     text-align: center;
+  }
+}
+
+sup {
+  display: inline-block;
+  padding-left: 2px;
+
+  font-size: .8em;
+  vertical-align: super;
+  line-height: 0;
+  color: $accent-color;
+}
+
+.footnotereturn {
+  text-decoration: none;
+}
+
+.footnotes {
+  font-size: .85em;
+
+  li {
+    & + li {
+      margin-top: 5px;
+    }
+
+    &:first-child {
+      p {
+        box-sizing: border-box;
+        border-top: 1px solid $button-bg-color;
+        padding-top: 10px;
+      }
+    }
+
+    p {
+      &:before {
+        counter-increment: ol;
+        content: counter(ol);
+
+        display: inline-block;
+        position: absolute;
+        margin: 0 0 0 -20px;
+
+        text-align: right;
+        color: $accent-color;
+      }
+    }
   }
 }
 

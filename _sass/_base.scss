@@ -40,16 +40,20 @@ i {
 }
 
 dt {
-  display: inline;
+  display: block;
   font-family: $header-font-stack;
   font-size: 1.05em;
 
   a {
-    color: $accent-color;
+  color: $accent-color;
   }
 }
 
 dd {
-  display: inline;
+  display: block;
   font-size: 0.9em;
+
+  & + dt {
+    margin-top: 10px;
+  }
 }
