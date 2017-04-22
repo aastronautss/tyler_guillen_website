@@ -31,10 +31,17 @@ nav_sort: 1
 
     <dl>
       <dt>
-        <a href="https://github.com/aastronautss/vizsla">Vizsla</a>
+        <a href="https://github.com/vizsla-analytics/tracebin">Tracebin</a>
       </dt>
       <dd>
-        A Rack middleware that collects application analytics, including response cycle time and SQL query timings, then asynchronously sends them to a remote service. A work in progress.
+        An applicaiton that collects application performance data from agents. Aggregates and displays 24 hours of data, including endpoint performance, database query and view rendering overhead, and general system health.
+      </dd>
+
+      <dt>
+        <a href="https://github.com/vizsla-analytics/vizsla">Vizsla</a>
+      </dt>
+      <dd>
+        The Ruby/Rack agent for Tracebin. Installs as a Rack middleware, and instruments various components of a web application, including response time, SQL queries, and system health. Asynchronously sends all data collected to Tracebin for ingestion.
       </dd>
 
       <dt>
