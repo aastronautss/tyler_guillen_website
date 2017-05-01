@@ -18,9 +18,7 @@ main {
 }
 
 article {
-  // margin: 0 auto;
   padding: 10px 0 25px 0;
-  // width: 600px;
 
   header {
     margin: 0 auto;
@@ -55,11 +53,21 @@ article {
       margin-top: 10px;
     }
 
-    h1 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol {
+      width: 600px;
       margin-left: auto;
       margin-right: auto;
-      width: 600px;
+    }
 
+    h1 {
       margin-top: 15px;
       margin-bottom: 0;
       font-family: Futura, "Open Sans", "Trebushet MS", Arial, sans-serif;
@@ -72,11 +80,8 @@ article {
     }
 
     h2 {
-      margin-left: auto;
-      margin-right: auto;
-      width: 600px;
-
       margin-top: 15px;
+      margin-bottom: 6px;
       font-family: Futura, "Open Sans", "Trebushet MS", Arial, sans-serif;
       font-size: 1.3em;
       font-style: italic;
@@ -88,12 +93,9 @@ article {
     }
 
     h3 {
-      margin-left: auto;
-      margin-right: auto;
-      width: 600px;
-
+      margin-top: 10px;
       font-family: "Open Sans", sans-serif;
-      font-size: 1.2em;
+      font-size: 1.15em;
       font-weight: 400;
       font-style: italic;
       letter-spacing: .05em;
@@ -104,21 +106,47 @@ article {
       }
     }
 
+    h4 {
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.15em;
+      font-weight: 300;
+      font-style: italic;
+      color: $header-4-color;
+
+      & + p {
+        margin-top: 0;
+      }
+    }
+
     p {
-      margin-left: auto;
-      margin-right: auto;
-      width: 600px;
+      text-align: justify;
+    }
+
+    ul,
+    ol {
+      box-sizing: border-box;
+      padding: 0 0 0 30px;
       text-align: justify;
     }
 
     ul {
-      box-sizing: border-box;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0 0 0 30px;
-      width: 600px;
       list-style-type: disc;
-      text-align: justify;
+    }
+
+    ol {
+      list-style-type: decimal;
+    }
+
+    li {
+      & + li {
+        margin-top: 3px;
+      }
+    }
+
+    strong {
+      font-family: "Open Sans", "Trebushet MS", Arial, sans-serif;
+      font-weight: 600;
+      color: $strong-color;
     }
 
     p a,
@@ -186,6 +214,14 @@ sup {
   margin: 15px auto;
   width: 600px;
   overflow-x: auto;
+}
+
+p code,
+li > code {
+  display: inline-block;
+  font-family: 'Roboto Mono', monospace;
+  font-size: .8em;
+  background-color: #f1f1f1;
 }
 
 figure {
