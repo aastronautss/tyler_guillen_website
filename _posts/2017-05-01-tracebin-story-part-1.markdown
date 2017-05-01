@@ -5,7 +5,7 @@ category: programming
 summary: I helped build an application performance monitoring tool for web applications. Here's what I learned in the process.
 ---
 
-A [friend](http://minevskiy.com), who I met through [Launch School](https://launchschool.com), and I and decided to pair on a project together. We set out to make a fast and easy way for a developer to keep a finger on the pulse of their web application, with minimal configuration and setup. Four weeks and many cups of coffee later, Tracebin was born. This is the story of the development process of Tracebin. The service is currently up and running at [traceb.in](https://traceb.in)
+A [friend](http://minevskiy.com), who I met through [Launch School](https://launchschool.com), and I decided to pair on a project together. We set out to make a fast and easy way for a developer to keep a finger on the pulse of their web application, with minimal configuration and setup. Four weeks and many cups of coffee later, Tracebin was born. This is the story of the development process of Tracebin. The service is currently up and running at [traceb.in](https://traceb.in)
 
 {% include blog_image.html img="tracebin_screenshot_1.png" title="Tracebin in Action" %}
 
