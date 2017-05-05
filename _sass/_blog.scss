@@ -3,17 +3,47 @@ body {
 }
 
 main {
-  padding: 10px;
+  padding: 0 10px 10px 10px;
 
   font-family: "Mate", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.3em;
   color: #4a4a4a;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+nav {
+  padding: 15px;
+  text-align: center;
+  font-family: $subheader-font-stack;
+
+  span,
+  ul,
+  li {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+
+  li {
+    margin-left: 20px;
+
+    &.active {
+      font-weight: 600;
+    }
+  }
+}
+
+.nav-heading {
+  font-size: 1.5em;
+  font-family: Futura, "Open Sans", "Trebushet MS", Arial, sans-serif;
 
   a {
-    color: #666;
-    text-decoration: none;
+    color: $header-1-color;
   }
 }
 
@@ -30,7 +60,7 @@ article {
     font-family: Futura, "Open Sans", "Trebushet MS", Arial, sans-serif;
     font-size: 1.8em;
     line-height: 1em;
-    color: #333;
+    color: $header-1-color;
   }
 
   .post-subtitle {
@@ -241,10 +271,6 @@ figcaption {
   font-style: italic;
   font-size: 0.9em;
   color: $accent-color;
-}
-
-.back-to-main {
-  font-family: "Open Sans", sans-serif;
 }
 
 .fade-on-leave {

@@ -1,0 +1,15 @@
+<nav>
+  <span class="nav-heading">
+    <a class="leave-layout" href="{{ site.url }}">Tyler Guillen</a>
+  </span>
+
+  <ul class="nav-links">
+    {% assign nav_pages = site.data.menu %}
+
+    {% for p in nav_pages %}
+      <li {% if page.url contains p.url %} class="active" {% endif %}>
+        <a class="leave-layout" href="{{ p.url }}">{{ p.text }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

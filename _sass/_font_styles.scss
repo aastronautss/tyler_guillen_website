@@ -1,5 +1,41 @@
 @import url('https://fonts.googleapis.com/css?family=Mate:400,400i|Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto+Mono');
 
+@font-face {
+  font-family: 'Futura';
+  src: url('/fonts/Futura-Medium.eot');
+  src: local('Futura Medium'), local('Futura-Medium'),
+    url('/fonts/Futura-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Futura-Medium.woff2') format('woff2'),
+    url('/fonts/Futura-Medium.woff') format('woff'),
+    url('/fonts/Futura-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('/fonts/Futura-MediumItalic.eot');
+  src: local('Futura Medium Italic'), local('Futura-MediumItalic'),
+    url('/fonts/Futura-MediumItalic.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Futura-MediumItalic.woff2') format('woff2'),
+    url('/fonts/Futura-MediumItalic.woff') format('woff'),
+    url('/fonts/Futura-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('/fonts/Futura-Bold.eot');
+  src: local('Futura Bold'), local('Futura-Bold'),
+    url('/fonts/Futura-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Futura-Bold.woff2') format('woff2'),
+    url('/fonts/Futura-Bold.woff') format('woff'),
+    url('/fonts/Futura-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 $header-font-stack: Futura, "Open Sans", "Trebushet MS", Arial, sans-serif;
 $subheader-font-stack: "Open Sans", sans-serif;
 $text-font-stack: "Mate", sans-serif;

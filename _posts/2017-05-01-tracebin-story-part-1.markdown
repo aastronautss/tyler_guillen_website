@@ -194,4 +194,4 @@ When we built our agent, we set out to create a lightweight, transparent perform
 2. `concurrent-ruby` is an unmistakably better alternative to the low-level APIs that Ruby has built in for multi-threaded workflows. It catches the language up to other languages that offer better abstractions for concurrent functionality. This is something that the core Ruby libraries are lacking.
 3. It is very important to pay attention to when and how a library’s code is executed during the lifetime of its host application. Concurrency adds an additional level of complexity to this consideration.
 
-Part 2 will explore the challenges we faced when handling all this data, including database decisions and query plans.
+Part 2 will explore the challenges we faced when handling all this data, including database decisions and query plans. You can read part 2 [here](/blog/2017/05/03/tracebin-story-part-2/).
