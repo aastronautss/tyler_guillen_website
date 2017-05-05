@@ -33,7 +33,7 @@ Here’s the big takeaway, which has been the main theme for the database decisi
 ### The Schema Dilemma: How normalized are your tables?
 With our current model, we have two basic entity types: transactions and events. They exist in a one-to-many relationship. Events can be subdivided into three or four categories, each with their own kinds of attributes. For example, database operations don’t have the same kinds of characteristics as controller actions. Therefore, we might imagine a schema in which we have separate tables for each event type.
 
-{% include blog_image_narrow.html img="tracebin_db_schema_1.png" title="Nested event structure." %}
+{% include blog_image_noresize.html img="tracebin_db_schema_1.png" title="Nested event structure." %}
 
 Missing from There are a few problems with this. First, while this schema provides a great deal of flexibility, it comes at a cost of performance, especially when we keep in mind how we plan to query this data. With this in mind, it helps to recognize what kind of data we want from these tables. Here’s an example of the output we’re expecting:
 
@@ -43,13 +43,13 @@ In order to obtain data for a table like this in a single query, we would need t
 
 At the other end of the normalization spectrum, we end up with a completely denormalized schema in which all event data is stored in the `Transactions` table. PostgreSQL’s JSON datatype makes this possible while keeping the relation sane.
 
-{% include blog_image_narrow.html img="tracebin_db_schema_2.png" title="Nested event structure." %}
+{% include blog_image_noresize.html img="tracebin_db_schema_2.png" title="Nested event structure." %}
 
 The `events` column stores an array of JSON objects, each of which contains all the data related for the event. With this, we end up with what is essentially a NoSQL datastore. We can’t perform direct JOINs and aggregates on that JSON column, which means the table we’re trying to obtain may be difficult. Thankfully, there are several functions in PostgreSQL that help us to convert JSON structures into virtual tables, which we do end up doing with some endpoints.
 
 Now, we could’ve used MongoDB all along if we wanted to structure our data like this! This also isn’t really the best schema for the table we’re trying to create, so let’s normalize out all events into their own table:
 
-{% include blog_image_narrow.html img="tracebin_db_schema_3.png" title="Nested event structure." %}
+{% include blog_image_noresize.html img="tracebin_db_schema_3.png" title="Nested event structure." %}
 
 Here, we have columns for all the information common to each event type, and put the data unique to each event type in a JSON object. We also add a custom ENUM datatype to indicate the event’s type. This way, if we need to get information specific to a certain event, we just need to put that type in the `WHERE` clause of our query. Notice how we keep the `events` column in `Transactions`, giving us two representations of each event. We do this because, as we will see, some queries will be easier to perform on the JSON objects, while others will be much easier with the `Events` table.
 
@@ -118,7 +118,7 @@ Now that we’ve found an efficient way to persist our agent’s data, we need t
 
 We’re using two charting libraries for these charts: Datatables.net and the Google visualization library (now known as Google Charts). We chose them among the countless other charting libraries because they’re both flexible and take similar data structures as input. For each, we need an array of arrays, the elements of whom closely reflect the output. For Datatables (which we use for the Endpoints table), we just need to send data straight across to fill in the rows on the table. For Google Charts (which we use for the waterfall chart), the rows in the dataset reflect the size and positions of their respective bars.
 
-#### Building Queries
+### Building Queries
 
 Let's focus for a moment on the first table in the above screenshot, and explore how we can come to build the data for it. Here's an example of what the input for our endpoints table should look like--what our front end should receive from the server:
 
