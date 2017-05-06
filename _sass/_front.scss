@@ -85,6 +85,13 @@ footer {
       margin-top: 15px;
     }
   }
+
+  .links {
+    text-align: center;
+    font-family: $subheader-font-stack;
+    font-size: 1.15em;
+    color: $accent-color;
+  }
 }
 
 .contact-links {
