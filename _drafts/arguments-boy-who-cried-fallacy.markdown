@@ -13,7 +13,7 @@ Logical fallacies are presented as a sort of a zoo of phenomena, each with its o
 
 I’m really horrible at chess, but bear with me as I make this analogy. I know that there are at least two ways of handling the opening moves in a game. The first is to memorize a bunch of starting positions and the best responses to them. A lot of high level play, as I understand, involves a vast knowledge bank of positions and the best moves on those positions. The other is to build a more fundamental understanding of the early game, and play from those fundamentals. Proponents of this method (like Josh Waitzkin) like to claim that it enables more creative and intuitive play.
 
-I’m probably wrong about a lot of what I said in the preceding paragraph, but we’ll just use it as a basic analogy. Arguing is less like chess than some cliches make it out to be.
+I’m probably wrong about a lot of what I said in the preceding paragraph, but we’ll just use it as a basic analogy. Arguing is less like chess than some clichés make it out to be.
 
 Here I want to advocate the fundamentals-based approach to understanding logical fallacies.
 
@@ -109,7 +109,8 @@ Another thing to note is that when an argument begs the question, the inclusion 
 
 It’s sort of a cliché to complain about the confusion surrounding the term “begging the question,” but there you go.
 
-While I was in the process of getting my philosophy degree, I took it upon myself to be The Combative Friend. I loved to argue with people, and would routinely go out of my way to pick a fight over some of the silliest things. There’s something about being in a philosophy program that brought out my inner asshole, and an asshole I was.
+## Straw Mayonnaise
+This is probably the most common one I run into out in the wild.
 
 ## Possible Objections, Addressed to My Satisfaction but Probably Not Yours
 I know there are a few problems that you, dear reader, might have with what I have said here. That’s only natural; after all, I did file this under “philosophy,” and what good is philosophy without an onslaught of snarky counterarguments? Here I will try to address some of those objections.
