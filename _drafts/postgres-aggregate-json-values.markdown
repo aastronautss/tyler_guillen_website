@@ -39,7 +39,7 @@ finish          | timestamp
 business_day_id | integer
 ```
 
-We want to calcualte the average amount of time it takes for a person to complete each task. For that, let's start with the following query:
+We want to calculate the average amount of time it takes for a person to complete each task. For that, let's start with the following query:
 
 ```sql
 SELECT AVG(finish - start)
