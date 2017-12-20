@@ -8,4 +8,4 @@ When you first start sinking your teeth into Rails, you'll start hearing the "sk
 
 Just so we're all on the same page, some examples might do us some good. Suppose we have a blog app with `Article`, `User`, and `Comment` models. They each have their own respective 
 
-## Callbacks
+## Callbacks, or, How to Write the Most Unmaintainable Code
