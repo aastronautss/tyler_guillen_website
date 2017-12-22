@@ -1,13 +1,15 @@
 ---
 title: "Have Better Arguments: The Boy Who Cried Fallacy"
 category: philosophy
+summary: 
+subtitle: No, I did not commit an ad hominem. I merely insulted you.
 ---
 
-Arguments are a wonderful tool. To me, they can be an opportunity to learn new things about ourselves and other people. A good argument should give us a sense of humility and enable us to more critically examine the things we hold to be true. It’s a bit of a shame that the term itself comes with a bit of baggage, especially in the age of the internet. At times it feels like people don’t have arguments so much as they list excuses at one another for believing what they do. I’m here to say that it doesn’t have to be that way.  I want people to have better arguments.
+This is part of a series on how to have better arguments with people. Most people are bad at having arguments, and I want people to be better at it.<!-- more --> It’s a bit of a shame that the term "argument" itself comes with a bit of baggage, especially in the age of the internet. At times it feels like people don’t have arguments so much as they list excuses at one another for believing what they do. I’m here to say that it doesn’t have to be that way.
 
 A small side note: I’m using the term ‘argument’ in two senses: the first as synonymous with a debate, and the second as the formal definition you’d see in your intro logic class. I’ll try to indicate which way I use it as I go.
 
-This first part in what might be a series will be about the logical fallacy, which is something I think a lot of people misunderstand in the general sense. I see a lot of people crying fallacy as if it’s a trump card they can play to automatically win the debate. Sometimes it’s almost as if the person who has the names and definitions of the most fallacies committed to memory has the upper hand.
+Here I will talk about the concept of a logical fallacy, which is something I think a lot of people misunderstand in the general sense. I see a lot of people crying fallacy as if it’s a trump card they can play to automatically win the debate. Sometimes it’s almost as if the person who has the names and definitions of the most fallacies committed to memory has the upper hand.
 
 Logical fallacies are presented as a sort of a zoo of phenomena, each with its own name and subspecies. They’re treated as fundamental ideas that exist on their own, and can be trifled over as such. I have a hunch that what a lot of people miss is where they actually come from, and what makes them fallacies in the first place.
 
@@ -110,7 +112,16 @@ Another thing to note is that when an argument begs the question, the inclusion 
 It’s sort of a cliché to complain about the confusion surrounding the term “begging the question,” but there you go.
 
 ## Straw Mayonnaise
-This is probably the most common one I run into out in the wild.
+This is probably the most common one I run into out in the wild. A straw man is a misrepresentation of the opposing argument. The motivation for committing this fallacy is to put your own argument on better rhetorical footing (not logical footing, as we'll discuss in the next section) by demonstrating the flaws in the opposing one. A straw man is more easily set aflame than an actual man, you see.
+
+Claims about a straw man argument are claims about an argument's form. A true straw man, thus, is an argument that appears to have the same form as the actual one, but does not (Typically, it has different, more obvious flaws than the actual argument). If the form of the argument is the same--_even without appearing so_--then it is not a straw man argument. This is why analogies are often useful when illustrating an argument. In a good analogy, the form stays the same even with different content.
+
+## The Fallacy Fallacy Fallacy Fallacy
+Let's illustrate the _straw man_ from above. You make an argument. I demonstrate why your argument is invalid. You claim that I've misrepresented your argument with a straw man. Your claim holds, but you make the additional claim that your vindication indicates that your argument is valid. Congratulations, you've committed the fallacy fallacy!
+
+Here's where we cash out on all this "crying fallacy" business. Crying fallacy does not ever affect the validity of your own position. Your knowledge of fallacies does not improve your position in any argument, especially when you deploy that knowledge offensively.
+
+The fallacy fallacy is at the core of this post. Once you grasp it and its implications, you'll be much better off.
 
 ## Possible Objections, Addressed to My Satisfaction but Probably Not Yours
 I know there are a few problems that you, dear reader, might have with what I have said here. That’s only natural; after all, I did file this under “philosophy,” and what good is philosophy without an onslaught of snarky counterarguments? Here I will try to address some of those objections.
@@ -132,7 +143,7 @@ Herf is a glub.
 Herf is a spilor.
 ```
 
-The above argument is a valid one, but it’s ultimately meaningless.
+The above argument is a valid one, but it’s ultimately meaningless. "Soundness" refers to whether or not an argument's assumptions are actually true. That is an epistemological claim, and is beyond the scope of this post.
 
 ### Identifying a Logical Fallacy as a Heuristic
-I’m not urging you to drop the concept of a logical fallacy altogether, as a possible objection might claim. I’m not asking you to not worry about learning what, e.g., the fallacy of the excluded middle is.
+I’m not urging you to drop the concept of a logical fallacy altogether, as a possible objection might claim. I’m not asking you to not worry about learning what, e.g., the fallacy of the excluded middle is. What I urge is to merely think more about the structure of an argument, and make judgments about it from that basis. There are millions of ways for an argument to be a bad one, and the taxonomy of fallacies surely cannot cover them all. Furthermore, I maintain that it is almost always the case that logical fallacies (like most things) are better understood by having a grasp of their conceptual underpinnings.
