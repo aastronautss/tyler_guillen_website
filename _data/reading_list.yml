@@ -16,6 +16,10 @@
 -
   header: 2017
   books:
+    - 
+      title: "Capitalist Realism: Is There No Alternative?"
+      author: Mark Fisher
+      url: https://www.amazon.com/dp/1846943175
     -
       title: "The Pragmatic Programmer: From Journeyman to Master"
       author: Andrew Hunt and David Thomas
