@@ -2,9 +2,9 @@
   header: Currently Reading
   books:
     -
-      title: Priestdaddy
-      author: Patricia Lockwood
-      url: https://www.amazon.com/Priestdaddy-Memoir-Patricia-Lockwood/dp/1594633738/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1520360905&sr=8-1
+      title: The Plague
+      author: Albert Camus
+      url: https://smile.amazon.com/Plague-Albert-Camus/dp/0679720219/ref=sr_1_1?ie=UTF8&qid=1525969484&sr=8-1&keywords=the+plague
     -
       title: The Black Swan
       author: Nassim Nicholas Taleb
@@ -17,13 +17,17 @@
   header: 2018
   books:
     -
+      title: Priestdaddy
+      author: Patricia Lockwood
+      url: https://www.amazon.com/Priestdaddy-Memoir-Patricia-Lockwood/dp/1594633738/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=1520360905&sr=8-1
+    -
       title: The Sirens of Titan
       author: Kurt Vonnegut
       url: https://smile.amazon.com/Sirens-Titan-Novel-Kurt-Vonnegut/dp/0385333498/ref=asap_bc?ie=UTF8
 -
   header: 2017
   books:
-    - 
+    -
       title: "Capitalist Realism: Is There No Alternative?"
       author: Mark Fisher
       url: https://www.amazon.com/dp/1846943175
