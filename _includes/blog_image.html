@@ -1,11 +1,12 @@
-{% assign img_url = "http://dqk9b9tedbr48.cloudfront.net
-/tylerguillen.com/" %}
-{% assign resize_url = "https://cif4rnfn.cloudimg.io/s/bound/650x650/" %}
+{% assign imgpath = "/img/" %}
+{% assign resizepath = "lg/" %}
+
+<!-- bound inside 650x650 -->
 
 <figure>
   {% if include.img %}
-    <a href="{{ img_url }}{{ include.img }}" title="{{ include.title }}" target="_blank">
-      <img src='{{ resize_url }}{{ img_url }}{{ include.img }}' alt="{% if include.alt %}{{ include.alt }}{% else %}{{ include.caption }}{% endif %}" />
+    <a href="{{ imgpath }}{{ include.img }}" title="{{ include.title }}" target="_blank">
+      <img src='{{ imgpath }}{{ resizepath }}{{ include.img }}' alt="{% if include.alt %}{{ include.alt }}{% else %}{{ include.caption }}{% endif %}" />
     </a>
   {% endif %}
 

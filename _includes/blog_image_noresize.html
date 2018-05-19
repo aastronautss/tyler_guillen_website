@@ -1,10 +1,9 @@
-{% assign img_url = "http://dqk9b9tedbr48.cloudfront.net
-/tylerguillen.com/" %}
+{% assign imgpath = "/img/" %}
 
 <figure>
   {% if include.img %}
-    <a href="{{ img_url }}{{ include.img }}" title="{{ include.title }}" target="_blank">
-      <img src='{{ img_url }}{{ include.img }}' alt="{% if include.alt %}{{ include.alt }}{% else %}{{ include.caption }}{% endif %}" />
+    <a href="{{ imgpath }}{{ include.img }}" title="{{ include.title }}" target="_blank">
+      <img src='{{ imgpath }}{{ include.img }}' alt="{% if include.alt %}{{ include.alt }}{% else %}{{ include.caption }}{% endif %}" />
     </a>
   {% endif %}
 

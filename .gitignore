@@ -28,3 +28,6 @@ _site/
 
 # OS stuff
 .DS_Store
+
+*.sublime-workspace
+*.sublime-project
