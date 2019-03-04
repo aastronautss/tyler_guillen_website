@@ -5,6 +5,10 @@
       title: The Plague
       author: Albert Camus
       url: https://smile.amazon.com/Plague-Albert-Camus/dp/0679720219/
+    -
+      title: Designing Data-Intensive Applications
+      author: Martin Kleppmann
+      url: https://smile.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321/
 -
   header: 2019
   books:
