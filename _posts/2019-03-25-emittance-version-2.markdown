@@ -1,7 +1,7 @@
 ---
 title: "Emittance, Version 2"
 category: programming
-summary:
+summary: ''
 ---
 
 Dependency management is one of the key challenges that a developer faces as their software grows in complexity. It’s incredibly easy to introduce a dependency into a class that winds up being difficult to extract after a while.<!-- more --> In a lot of cases, these are two-way entanglements between the caller and the callee.
