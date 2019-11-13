@@ -1,11 +1,11 @@
 ---
-title: "Tyler's Everest: Thoughts on Béla Tarr's Sátántangó"
+title: "Oh No It's a Movie Review: Thoughts on Béla Tarr's Sátántangó"
 category: movies
-summary: ""
+summary: "Adulterers and false prophets and diabetics, oh my!"
 subtitle: "Adulterers and false prophets and diabetics, oh my!"
 ---
 
-## I: IN WHICH TYLER DISCUSSES THE "IT’S A LONG PICTURE" ELEPHANT IN THE ROOM
+## I: In which Tyler discusses the "It's A Long Picture" elephant in the room
 
 Okay, let's get all of the takes about the 450-minute runtime out of our system first:
 
@@ -17,7 +17,7 @@ It was because of this that I started hoping about two hours into the picture th
 
 There are the kinds of people who don’t so much _view_ art movies as they do sit across the room from them. They inhabit the persona (eyy, good pull) of a viewer with the same sort of irony that they would don when they put on a trucker hat or something. Listen, I can be as sarcastic about art as the next guy, but I do it mostly out of love for the text itself, not because I resent myself too much to let myself enjoy it.
 
-## II: IN WHICH TYLER ACTUALLY TALKS ABOUT THE MOVIE
+## II: In which Tyler actually talks about the movie
 
 One of the easiest things to criticize about a work is the stylistic choices made therein. The grand question that anybody has regarding style is about how it serves the narrative, as if that is the order of operations inscribed on a stone tablet somewhere. Narrative comes first, and everything else follows. I want to present a way of looking at a text that definitely isn’t anywhere near original or intelligent, but it’s how I prefer to approach a work, so here goes: style is a component of a kind of language that a work establishes to build its narrative, and neither "serves" the other so much as they build themselves from each other.
 
