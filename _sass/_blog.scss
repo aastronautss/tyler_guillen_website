@@ -72,6 +72,7 @@ article {
   }
 
   .post-date {
+    margin-top: 6px;
     font-style: italic;
     color: #888;
   }
@@ -210,30 +211,9 @@ sup {
   font-size: .85em;
 
   li {
-    & + li {
-      margin-top: 5px;
-    }
-
-    &:first-child {
-      p {
-        box-sizing: border-box;
-        border-top: 1px solid $button-bg-color;
-        padding-top: 10px;
-      }
-    }
-
     p {
-      &:before {
-        counter-increment: ol;
-        content: counter(ol);
-
-        display: inline-block;
-        position: absolute;
-        margin: 0 0 0 -20px;
-
-        text-align: right;
-        color: $accent-color;
-      }
+      box-sizing: border-box;
+      padding-top: 10px;
     }
   }
 }
