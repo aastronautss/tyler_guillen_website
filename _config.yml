@@ -1,3 +1,7 @@
+title: Tyler Guillen
+url: https://tylerguillen.com/blog
+author: Tyler Guillen
+
 markdown: kramdown
 highlighter: rouge
 
@@ -27,5 +31,6 @@ defaults:
       layout: main
       assets: main
 
-gems:
+plugins:
   - jekyll-paginate
+  - jekyll-feed

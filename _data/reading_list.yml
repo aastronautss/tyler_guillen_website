@@ -2,16 +2,31 @@
   header: Currently Reading
   books:
     -
+      title: Riddles of Existence
+      author: Earl Conee & Theodore Sider
+      url: https://www.amazon.com/Riddles-Existence-Guided-Tour-Metaphysics/dp/0199215189
+-
+  header: 2019
+  books:
+    -
+      title: The Plague
+      author: Albert Camus
+      url: https://smile.amazon.com/Plague-Albert-Camus/dp/0679720219/
+    -
+      title: Designing Data-Intensive Applications
+      author: Martin Kleppmann
+      url: https://smile.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321/
+    -
       title: Consider the Lobster
       author: David Foster Wallace
-      url: https://www.amazon.com/Consider-Lobster-Essays-Foster-Wallace/dp/0316013323
+      url: https://smile.amazon.com/Consider-Lobster-Essays-Foster-Wallace/dp/0316013323
 -
   header: 2018
   books:
     -
-      title: Darkness Visible
+      title: "Darkness Visible: A Memoir of Madness"
       author: William Styron
-      url: https://www.amazon.com/Darkness-Visible-Madness-William-Styron/dp/0679736395
+      url: https://smile.amazon.com/Darkness-Visible-Madness-William-Styron/dp/0679736395
     -
       title: Priestdaddy
       author: Patricia Lockwood
