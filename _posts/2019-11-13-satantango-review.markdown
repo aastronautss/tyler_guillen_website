@@ -1,8 +1,8 @@
 ---
-title: "Oh No It's a Movie Review: Thoughts on Béla Tarr's Sátántangó"
+title: "Thoughts on Béla Tarr's Sátántangó"
 category: movies
-summary: "Adulterers and false prophets and diabetics, oh my!"
-subtitle: "Adulterers and false prophets and diabetics, oh my!"
+summary: "More like false profits, am I right?"
+subtitle: "More like false profits, am I right?"
 ---
 
 ## I: In which Tyler discusses the "It's A Long Picture" elephant in the room
