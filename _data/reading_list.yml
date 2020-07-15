@@ -2,13 +2,20 @@
   header: Currently Reading
   books:
     -
-      title: The Plague
-      author: Albert Camus
-      url: https://smile.amazon.com/Plague-Albert-Camus/dp/0679720219/
+      title: Between the World and Me
+      author: Ta-Nehisi Coates
+      url: https://www.indiebound.org/book/9780812993547
+-
+  header: 2020
+  books:
     -
-      title: Designing Data-Intensive Applications
-      author: Martin Kleppmann
-      url: https://smile.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321/
+      title: "Riddles of Existence: A Guided Tour of Metaphysics"
+      author: Earl Conee & Theodore Sider
+      url: https://www.indiebound.org/book/9780198724049
+    -
+      title: "Why Fish Don't Exist: A Story of Loss, Love, and the Hidden Order of Life"
+      author: Lulu Miller
+      url: https://www.indiebound.org/book/9781501160271
 -
   header: 2019
   books:
@@ -16,6 +23,14 @@
       title: Consider the Lobster
       author: David Foster Wallace
       url: https://smile.amazon.com/Consider-Lobster-Essays-Foster-Wallace/dp/0316013323
+    -
+      title: The Plague
+      author: Albert Camus
+      url: https://smile.amazon.com/Plague-Albert-Camus/dp/0679720219/
+    -
+      title: Designing Data-Intensive Applications
+      author: Martin Kleppmann
+      url: https://smile.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321/
 -
   header: 2018
   books:
