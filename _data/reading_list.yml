@@ -2,9 +2,9 @@
   header: Currently Reading
   books:
     -
-      title: Between the World and Me
-      author: Ta-Nehisi Coates
-      url: https://www.indiebound.org/book/9780812993547
+      title: "Remote: Office Not Required"
+      author: Jason Fried & David Heinemeier Hansson
+      url: https://www.indiebound.org/book/9780804137508
 -
   header: 2020
   books:
@@ -16,6 +16,10 @@
       title: "Why Fish Don't Exist: A Story of Loss, Love, and the Hidden Order of Life"
       author: Lulu Miller
       url: https://www.indiebound.org/book/9781501160271
+    -
+      title: Between the World and Me
+      author: Ta-Nehisi Coates
+      url: https://www.indiebound.org/book/9780812993547
 -
   header: 2019
   books:
