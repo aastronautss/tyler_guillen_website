@@ -2,9 +2,9 @@
   header: Currently Reading
   books:
     -
-      title: "Remote: Office Not Required"
-      author: Jason Fried & David Heinemeier Hansson
-      url: https://www.indiebound.org/book/9780804137508
+      title: There There
+      author: Tommy Orange
+      url: https://www.indiebound.org/book/9780525520375
 -
   header: 2020
   books:
@@ -20,6 +20,10 @@
       title: Between the World and Me
       author: Ta-Nehisi Coates
       url: https://www.indiebound.org/book/9780812993547
+    -
+      title: "Remote: Office Not Required"
+      author: Jason Fried & David Heinemeier Hansson
+      url: https://www.indiebound.org/book/9780804137508
 -
   header: 2019
   books:
